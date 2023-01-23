@@ -6,12 +6,11 @@ export default function Home() {
     <main>
       <Navbar />
       <div className="mt-20 md:mt-44">
-        <div className="text-2xl md:text-6xl font-extrabold text-center">
-          <span>Audio to Text with AI</span>
+        <div className="text-3xl md:text-6xl font-extrabold text-center mb-5">
+          <h1 id="title">Audio to Text with AI</h1>
         </div>
-        <br />
-        <div className="max-w-screen-md m-auto">
-          <p className="text-lg font-normal text-center">
+        <div className="max-w-screen-md md:m-auto m-3">
+          <p id="description" className="text-lg font-normal text-center">
             Get text to audio with few clicks through Artificial Intelligence,
             DenoLyrics is a web application that understands many languages.
           </p>
