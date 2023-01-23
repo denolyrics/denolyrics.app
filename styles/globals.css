@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #180821;
+}
+
+p {
+  color: #49525b;
+}
+/* SCROLL BODY */
+body {
+  overflow: scroll;
+  height: 100vh;
+  width: auto;
+  overflow-x: hidden;
+  transition: 1s;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  background: rgb(222, 219, 219);
+}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #363141;
+}

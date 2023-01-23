@@ -1,9 +1,12 @@
-import './globals.css'
+// STYLES
+import "../styles/globals.css";
+import "../styles/font.css";
+
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -14,5 +17,5 @@ export default function RootLayout({
       <head />
       <body>{children}</body>
     </html>
-  )
+  );
 }
