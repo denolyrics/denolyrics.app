@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
-      <div className=" mt-44">
+      <div className="mt-20 md:mt-44">
         <div className="text-2xl md:text-6xl font-extrabold text-center">
           <span>Audio to Text with AI</span>
         </div>
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <p className="text-center text-sm">No credit card required</p>
 
-        <div className="drop-shadow-[0_50px_50px_rgba(41,41,54,1)] flex justify-center items-center mt-10">
+        <div className="drop-shadow-[0_50px_50px_rgba(41,41,54,1)] flex justify-center items-center mt-10 m-3">
           <Image
             unoptimized={true}
             src={"/screenshot.png"}
@@ -35,9 +35,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#292936] h-96 grid place-content-center mt-20">
+      <div className="bg-[#292936] md:h-96 grid place-content-center mt-20  p-3">
         <div className="max-w-screen-lg m-auto">
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
               <div className="text-2xl md:text-4xl font-bold text-white">
                 <div className="bg-[#74F9BE] w-[65px] h-[60px] rounded-xl relative mb-5">
