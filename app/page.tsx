@@ -1,3 +1,4 @@
+import Faq from "@/components/Faq";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 
@@ -63,7 +64,7 @@ export default function Home() {
 
                 <span>Built with Artificial Intelligence</span>
               </div>
-              <p className="text-lg font-normal text-[#CCD1D6] mt-2">
+              <p className="text-base font-normal text-[#CCD1D6] mt-2">
                 Built with an AI model that supports +50 languages, no matter if
                 the speed is fast or slow.
               </p>
@@ -73,17 +74,17 @@ export default function Home() {
               <div className="text-2xl md:text-4xl font-bold text-white">
                 <div className="bg-[#74F9BE] w-[65px] h-[60px] rounded-xl relative mb-5">
                   <svg
-                   xmlns="http://www.w3.org/2000/svg"
-                   fill="none"
-                   viewBox="0 0 24 24"
-                   strokeWidth={1.5}
-                   stroke="#363141"
-                   className="w-10 h-10"
-                   style={{
-                     position: "absolute",
-                     top: "50%",
-                     transform: "translate(30%, -50%)",
-                   }}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="#363141"
+                    className="w-10 h-10"
+                    style={{
+                      position: "absolute",
+                      top: "50%",
+                      transform: "translate(30%, -50%)",
+                    }}
                   >
                     <path
                       strokeLinecap="round"
@@ -94,7 +95,7 @@ export default function Home() {
                 </div>
                 <span>We use the best technologies</span>
               </div>
-              <p className="text-lg font-normal text-[#CCD1D6] mt-2">
+              <p className="text-base font-normal text-[#CCD1D6] mt-2">
                 Our team is dedicated to writing quality code with the latest
                 and greatest in web technology.
               </p>
@@ -105,6 +106,25 @@ export default function Home() {
       <br />
       <br />
       <br />
+      <Faq />
+
+      <div className="border-t border-slate-300 mt-20 pt-36">
+        <div className="text-3xl md:text-4xl font-extrabold text-center mb-5">
+          <h1 id="title">Try DenoLyrics today</h1>
+        </div>
+        <p className="text-base font-normal text-center">
+          Get started for free.
+        </p>
+        <p className="text-base font-normal text-center">
+          Discover the power of the future.
+        </p>
+
+        <div className="flex justify-center items-center mt-5">
+          <button className="select-none text-white hover:shadow-md bg-[#363141] hover:bg-black focus:outline-none font-medium rounded-lg inline-flex items-center px-5 py-2.5 mb-2 mt-2 border border-transparent">
+            Get started for free
+          </button>
+        </div>
+      </div>
     </main>
   );
 }
