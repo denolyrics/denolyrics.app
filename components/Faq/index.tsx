@@ -3,13 +3,13 @@ import React from "react";
 function Faq() {
   return (
     <div className="max-w-screen-lg m-auto">
-      <div className="grid grid-cols-2">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="text-center md:text-start">
           <div className="text-2xl md:text-4xl font-bold">
             <span>Frequent asked questions</span>
           </div>
 
-          <p className="mt-2 text-base font-normal">
+          <p className="mt-2 text-base font-normal mb-4 m-3 md:m-0">
             These are frequently asked questions that we have collected, if you
             have any suggestions or questions do not hesitate to send us an
             email to the support team.
