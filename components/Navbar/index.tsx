@@ -63,7 +63,7 @@ function Navbar() {
 
             <div className="flex justify-center items-center">
               <Link
-                href={"/"}
+                href="https://app.denolyrics.com"
                 className="select-none text-white hover:shadow-md bg-[#363141] hover:bg-black focus:outline-none font-medium rounded-lg px-5 py-2.5 border border-transparent"
               >
                 Get started for free
