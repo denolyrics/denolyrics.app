@@ -318,7 +318,7 @@ export default function Home() {
               </div>
               <p className="text-base font-normal text-[#CCD1D6] mt-2">
                 Built with an AI model that supports +50 languages, no matter if
-                the speed is fast or slow.
+                the audio speed is fast or slow.
               </p>
             </div>
 
