@@ -360,7 +360,7 @@ export default function Home() {
       <br />
       <Faq />
 
-      <div className="border-t border-slate-300 mt-10 md:mt-20 pt-10 md:pt-20">
+      <div className="border-t border-slate-300 mt-10 md:mt-40 pt-10 md:pt-20">
         <div className="flex justify-center items-center">
           <svg
             width={182}
