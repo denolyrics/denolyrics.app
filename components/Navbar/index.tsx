@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
+  const pathname = usePathname();
   return (
     <>
       <nav className="block md:hidden m-3">
@@ -25,12 +28,12 @@ function Navbar() {
           </div>
         </div>
       </nav>
-      <nav className="hidden md:block font-semibold text-[#6D7073] backdrop-blur-sm bg-white/80 sticky top-0 z-50 p-2">
+      <nav className="hidden md:block font-semibold backdrop-blur-sm bg-white/80 sticky top-0 z-50 p-2">
         <div className="grid grid-cols-2">
           <div className="flex justify-start items-start">
             <Link
               href="/"
-              className="select-none px-5 py-2.5 font-bold border border-transparent"
+              className="select-none px-5 py-2.5 border border-transparent"
             >
               DenoLyrics
             </Link>
@@ -39,22 +42,26 @@ function Navbar() {
             <div className="flex justify-center items-center">
               <Link
                 href="/"
-                className="select-none px-5 py-2.5 border border-transparent"
+                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
+                  pathname === "/" ? "text-black" : "text-[#6D7073]"
+                }`}
               >
                 Home
               </Link>
             </div>
             <div className="flex justify-center items-center">
               <Link
-                href="/about"
-                className="select-none px-5 py-2.5 border border-transparent"
+                href="/pricing"
+                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
+                  pathname === "/pricing" ? "text-black" : "text-[#6D7073]"
+                }`}
               >
                 Pricing
               </Link>
             </div>
             <div className="flex justify-center items-center">
               <Link
-                href="/about"
+                href="/help"
                 className="select-none px-5 py-2.5 border border-transparent"
               >
                 Help

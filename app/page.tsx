@@ -1,12 +1,10 @@
 import Faq from "@/components/Faq";
-import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
-      <Navbar />
       <div className="mt-20 md:mt-10">
         <div className="flex justify-center items-center">
         <svg
