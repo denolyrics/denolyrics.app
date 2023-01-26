@@ -51,7 +51,7 @@ function Footer() {
                 </svg>
                 <span className="sr-only">Twitter page</span>
               </a>
-              <a href="#">
+              <a href="https://www.github.com/denolyrics">
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"
