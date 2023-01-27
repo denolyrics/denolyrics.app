@@ -4,7 +4,10 @@ import React from "react";
 function Pricing() {
   return (
     <>
-      <div className="flex justify-around mr-10">
+      <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 mt-5">
+        <h1 id="title">Simple pricing, powerful features</h1>
+      </div>
+      <div className="flex justify-around mr-10 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-3">
           {suscriptions.map((sub, index) => {
             return (
