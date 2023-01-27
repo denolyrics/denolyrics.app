@@ -9,7 +9,9 @@ function Navbar() {
     <>
       <nav className="block md:hidden m-3">
         <div className="grid grid-cols-2">
-          <div className="font-extrabold">DenoLyrics</div>
+          <Link href="/" className="font-extrabold">
+            DenoLyrics
+          </Link>
           <div className="flex justify-end">
             <svg
               xmlns="http://www.w3.org/2000/svg"
