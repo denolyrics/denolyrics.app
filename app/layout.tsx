@@ -4,6 +4,8 @@ import "../styles/font.css";
 import Footer from "./footer";
 import Navbar from "../components/Navbar";
 
+import { ContextNavbarProvider } from "../context/NavbarContext";
+
 export default function RootLayout({
   children,
 }: {
@@ -17,8 +19,10 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <Navbar />
-        {children}
+        <ContextNavbarProvider>
+          <Navbar />
+          {children}
+        </ContextNavbarProvider>
         <Footer />
       </body>
     </html>

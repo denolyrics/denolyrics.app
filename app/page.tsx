@@ -1,8 +1,18 @@
+"use client";
+
+import { useContext } from "react";
 import Faq from "@/components/Faq";
 import Image from "next/image";
 import Link from "next/link";
 
+// CONTEXT
+import NavbarContext from "../context/NavbarContext";
+import { NavbarContextType } from "../context/NavbarContext/types";
+
 export default function Home() {
+  const { ShowItemsMobile } = useContext(NavbarContext) as NavbarContextType;
+
+  if (ShowItemsMobile) return <div />;
   return (
     <main>
       <div className="mt-20 md:mt-10">

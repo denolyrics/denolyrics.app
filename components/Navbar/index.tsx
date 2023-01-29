@@ -1,11 +1,18 @@
 "use client";
-import { useState } from "react";
+import { useContext } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// CONTEXT
+
+import NavbarContext from "../../context/NavbarContext";
+import { NavbarContextType } from "../../context/NavbarContext/types";
+
 function Navbar() {
   const pathname = usePathname();
-  const [ShowItemsMobile, setShowItemsMobile] = useState(false);
+  const { ShowItemsMobile, setShowItemsMobile } = useContext(
+    NavbarContext
+  ) as NavbarContextType;
   return (
     <>
       <nav className="block md:hidden m-3">
@@ -75,17 +82,22 @@ function Navbar() {
           <Link
             onClick={() => setShowItemsMobile((valueState) => !valueState)}
             href="/help"
-            className="select-none px-5 py-2.5 border border-transparent"
+            className={`select-none px-5 py-2.5 font-bold border border-transparent ${
+              pathname === "/help" ? "text-black" : "text-[#6D7073]"
+            }`}
           >
             Help
           </Link>
-          <Link
-            onClick={() => setShowItemsMobile((valueState) => !valueState)}
-            href="https://app.denolyrics.com"
-            className="select-none text-white hover:shadow-md bg-[#363141] hover:bg-black focus:outline-none font-medium rounded-lg px-5 py-2.5 border border-transparent"
-          >
-            Get started for free
-          </Link>
+
+          <div className="flex justify-center items-center">
+            <Link
+              onClick={() => setShowItemsMobile((valueState) => !valueState)}
+              href="https://app.denolyrics.com"
+              className="select-none text-white hover:shadow-md bg-[#363141] hover:bg-black focus:outline-none font-medium rounded-lg px-5 py-2.5 border border-transparent"
+            >
+              Get started for free
+            </Link>{" "}
+          </div>
         </div>
       )}
       <nav className="hidden md:block font-semibold backdrop-blur-sm bg-white/80 sticky top-0 z-50 p-2">
@@ -122,7 +134,9 @@ function Navbar() {
             <div className="flex justify-center items-center">
               <Link
                 href="/help"
-                className="select-none px-5 py-2.5 border border-transparent"
+                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
+                  pathname === "/help" ? "text-black" : "text-[#6D7073]"
+                }`}
               >
                 Help
               </Link>
