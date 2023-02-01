@@ -40,41 +40,29 @@ const faqs = [
   {
     id: 1,
     question: "What is DenoLyrics?",
-    answer: `Super takes your Notion pages and turns them in to a high
-    performing, fast, SEO-optimized website. This means you
-    manage your content in Notion and you manage your site in
-    Super. Well, actually, Super takes care of most of the
-    website building automatically, and this is what makes using
-    Super feel magical.`,
+    answer: `Is an Artificial Intelligence app that uses the large scale model
+    Whisper, to perform real time speech recognition,Whisper is an automatic speech recognition 
+    (ASR) system trained on 680,000 hours of multilingual and multitask 
+    supervised data collected from the web. We show that the use of such a 
+    large and diverse dataset leads to improved robustness to accents, 
+    background noise and technical language.`,
   },
   {
     id: 2,
     question: "What data does DenoLyrics send to the cloud?",
-    answer: `Super takes your Notion pages and turns them in to a high
-    performing, fast, SEO-optimized website. This means you
-    manage your content in Notion and you manage your site in
-    Super. Well, actually, Super takes care of most of the
-    website building automatically, and this is what makes using
-    Super feel magical.`,
+    answer: `Denolyrics Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multi-task model that can perform multilingual speech recognition as well 
+    as speech translation and language identification.`,
   },
   {
     id: 3,
     question: "DenoLyrics minimum system requirements?",
-    answer: `Super takes your Notion pages and turns them in to a high
-    performing, fast, SEO-optimized website. This means you
-    manage your content in Notion and you manage your site in
-    Super. Well, actually, Super takes care of most of the
-    website building automatically, and this is what makes using
-    Super feel magical.`,
+    answer: `You don't need to install anything everything run on the cloud in real time
+    you will receive audio transcription`,
   },
   {
     id: 4,
     question: "What payment methods do you accept?",
-    answer: `Super takes your Notion pages and turns them in to a high
-    performing, fast, SEO-optimized website. This means you
-    manage your content in Notion and you manage your site in
-    Super. Well, actually, Super takes care of most of the
-    website building automatically, and this is what makes using
-    Super feel magical.`,
+    answer: `We accept VISA, Mastercard secured with high security standards , we use
+    stripe.com as our platform`,
   },
 ];
