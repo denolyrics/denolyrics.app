@@ -62,7 +62,7 @@ const faqs = [
   {
     id: 4,
     question: "What payment methods do you accept?",
-    answer: `We accept VISA, Mastercard secured with high security standards , we use
-    stripe.com as our platform`,
+    answer: `We accept VISA, Mastercard secured with high security standards, we use
+    PayPal as our platform`,
   },
 ];
