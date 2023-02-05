@@ -10,7 +10,7 @@ function Footer() {
             © {new Date().getFullYear()} DenoLyrics
             </span>
             <div className="flex space-x-6 justify-center m-3">
-              <a href="#">
+              <a href="https://www.facebook.com/Denolyrics2023">
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"
