@@ -57,12 +57,12 @@ const faqs = [
     id: 3,
     question: "DenoLyrics minimum system requirements?",
     answer: `You don't need to install anything everything run on the cloud in real time
-    you will receive audio transcription`,
+    you will receive audio transcription.`,
   },
   {
     id: 4,
     question: "What payment methods do you accept?",
     answer: `We accept VISA, Mastercard secured with high security standards, we use
-    PayPal as our platform`,
+    PayPal as our platform.`,
   },
 ];
