@@ -41,7 +41,7 @@ const faqs = [
     id: 1,
     question: "What is DenoLyrics?",
     answer: `Is an Artificial Intelligence app that uses the large scale model
-    Whisper, to perform real time speech recognition,Whisper is an automatic speech recognition 
+    Whisper, to perform real time speech recognition, Whisper is an automatic speech recognition 
     (ASR) system trained on 680,000 hours of multilingual and multitask 
     supervised data collected from the web. We show that the use of such a 
     large and diverse dataset leads to improved robustness to accents, 
