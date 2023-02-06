@@ -85,6 +85,7 @@ const suscriptions = [
       "1 folder",
       "5 files",
       "files with 10MB limit",
+      "Email support"
     ],
     link: "https://app.denolyrics.com",
   },
