@@ -268,7 +268,7 @@ export default function Home() {
         </div>
         <div className="max-w-screen-md md:m-auto m-3">
           <p id="description" className="text-lg font-normal text-center">
-            Get text to audio with few clicks through Artificial Intelligence,
+            Get audio to text with few clicks through Artificial Intelligence,
             DenoLyrics is a web application that understands many languages.
           </p>
         </div>
