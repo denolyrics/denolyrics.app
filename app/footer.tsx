@@ -40,7 +40,7 @@ function Footer() {
                 </svg>
                 <span className="sr-only">Instagram page</span>
               </a>
-              <a href="#">
+              <a href="https://twitter.com/denolyrics">
                 <svg
                   className="w-6 h-6"
                   fill="currentColor"
