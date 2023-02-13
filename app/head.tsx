@@ -9,7 +9,7 @@ export default function Head() {
     "Get text to audio with few clicks through Artificial Intelligence, DenoLyrics is a web application that understands many languages.";
   return (
     <>
-      <title>DenoLyrics</title>
+      <title>DenoLyrics | Audio to Text with AI</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content={description} />
       <meta name="theme-color" content="#292936" />
