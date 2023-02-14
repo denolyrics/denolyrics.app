@@ -1,7 +1,6 @@
 import Faq from "@/components/Faq";
 import Link from "next/link";
-import React from "react";
-
+import CounterDiscount from "@/components/CounterDiscount";
 function Pricing() {
   return (
     <>
@@ -17,6 +16,15 @@ function Pricing() {
                 id={`Card ${sub.type}`}
                 className="w-full max-w-sm p-4 bg-menu border border-[#56545e] rounded-md shadow-md sm:p-8 ml-5 mr-5"
               >
+                {sub.duration === pricingOff.type &&
+                  pricingOff.expireDate >= new Date().getTime() && (
+                    <div className="float-right">
+                      <div className="p-3 bg-[#6930c3] text-white py-1 rounded-lg mb-2">
+                        50% OFF
+                      </div>
+                    </div>
+                  )}
+
                 <h5 className="mb-4 text-xl font-bold">{sub.type}</h5>
                 <div className="flex items-baseline">
                   <span className="text-3xl font-semibold">$</span>
@@ -27,6 +35,10 @@ function Pricing() {
                     {sub.type === "Hobby" ? "" : "/" + sub.duration}
                   </span>
                 </div>
+
+                {sub.duration === pricingOff.type && (
+                  <CounterDiscount expireDate={pricingOff.expireDate} />
+                )}
                 {/* List */}
                 <ul role="list" className="space-y-5 my-7">
                   {sub.benefits.map((benefit) => {
@@ -107,7 +119,7 @@ const suscriptions = [
   {
     id: 3,
     type: "Professional Gold",
-    pricing: 60,
+    pricing: 30,
     duration: "year",
     benefits: [
       "Text recognition in multiple languages",
@@ -119,3 +131,8 @@ const suscriptions = [
     link: "https://app.denolyrics.com/settings/billing?modal=3",
   },
 ];
+
+const pricingOff = {
+  type: "year",
+  expireDate: 1676680648321, // fecha actual
+};
