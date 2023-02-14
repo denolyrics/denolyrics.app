@@ -1,4 +1,5 @@
 import Faq from "@/components/Faq";
+import Link from "next/link";
 import React from "react";
 
 function Pricing() {
@@ -52,13 +53,13 @@ function Pricing() {
                     );
                   })}
                 </ul>
-                <button
-                  type="button"
+                <Link
+                  href={sub.link}
                   id={`btn-plan-${index}`}
                   className="select-none w-full hover:shadow-md bg-[#292936] hover:bg-black text-white focus:outline-none text-sm font-medium rounded-lg inline-flex justify-center text-center px-5 py-2.5 mb-2 mt-2 border border-transparent"
                 >
                   {sub.type === "Hobby" ? "Get Started for Free" : sub.type}
-                </button>
+                </Link>
               </div>
             );
           })}
@@ -85,7 +86,7 @@ const suscriptions = [
       "1 folder",
       "5 files",
       "files with 10MB limit",
-      "Email support"
+      "Email support",
     ],
     link: "https://app.denolyrics.com",
   },
