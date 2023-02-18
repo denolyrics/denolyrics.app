@@ -119,7 +119,7 @@ const suscriptions = [
   {
     id: 3,
     type: "Professional Gold",
-    pricing: 30,
+    pricing: 60,
     duration: "year",
     benefits: [
       "Text recognition in multiple languages",
