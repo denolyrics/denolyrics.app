@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="border-t border-slate-300 mt-10">
+      <footer className="border-t border-slate-300 mt-10">
         <div className="max-w-screen-md md:m-auto m-3 ">
           <div className="flex items-center justify-between">
             <span className="text-center m-3">
@@ -88,7 +88,7 @@ function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
