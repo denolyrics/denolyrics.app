@@ -27,8 +27,8 @@ export default function Head() {
         name="keywords"
         content="DenoLyrics, Audio to Text with AI, El Salvador, Get text to audio with few clicks through Artificial Intelligence,web application that understands many languages."
       />
-      <meta property="og:image:width" content="1920">
-      <meta property="og:image:height" content="1080">
+      <meta property="og:image:width" content="1920" />
+      <meta property="og:image:height" content="1080" />
       <link rel="icon" href="/denolyrics.svg" type="image/svg" />
       <meta property="og:image" content="https://www.denolyrics.com/preview.png" />
     </>
