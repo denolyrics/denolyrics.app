@@ -29,7 +29,7 @@ export default function Head() {
       />
 
       <link rel="icon" href="/denolyrics.svg" type="image/svg" />
-      <meta property="og:image" content="/preview.png" />
+      <meta property="og:image" content="https://www.denolyrics.com/preview.png" />
     </>
   );
 }
