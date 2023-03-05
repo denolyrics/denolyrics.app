@@ -33,7 +33,7 @@ function Footer() {
 
                 <span className="sr-only">Facebook page</span>
               </a>
-              <a href="https://www.linkedin.com/company/denolyrics2023">
+              <a href="https://www.linkedin.com/company/denolyrics">
                 <svg
                   className="w-6 h-6"
                   viewBox="0 0 256 256"
