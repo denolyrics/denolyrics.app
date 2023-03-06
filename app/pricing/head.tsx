@@ -20,7 +20,7 @@ export default function Head() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={DOMAIN} />
       <meta name="twitter:creator" content="@denolyrics" />
-      <meta name="twitter:title" content="DenoLyrics" />
+      <meta name="twitter:title" content="DenoLyrics | Pricing" />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content="https://www.denolyrics.com/preview.png" />
       <meta
