@@ -1,4 +1,5 @@
 import { faqs } from "../components/Faq";
+import Script from "next/script";
 
 export default function Head() {
   // @ts-ignore
@@ -60,7 +61,8 @@ export default function Head() {
         content="https://www.denolyrics.com/preview.png"
       />
 
-      <script
+      <Script
+        id="faq"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(parseLdJson()) }}
       />
