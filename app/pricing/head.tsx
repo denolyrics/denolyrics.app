@@ -13,7 +13,7 @@ export default function Head() {
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content={description} />
       <meta name="theme-color" content="#180821" />
-      <meta property="og:title" content="DenoLyrics" />
+      <meta property="og:title" content="DenoLyrics | Pricing" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={DOMAIN} />
 
