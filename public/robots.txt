@@ -1,0 +1,10 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Allow all crawlers
+User-agent: *
+Allow: /pricing
+
+
+Sitemap: https://www.denolyrics.com/sitemap.xml

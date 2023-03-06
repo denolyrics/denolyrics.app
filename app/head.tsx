@@ -1,3 +1,5 @@
+import { faqs } from "../components/Faq";
+
 export default function Head() {
   // @ts-ignore
   const DOMAIN =
@@ -7,13 +9,31 @@ export default function Head() {
 
   const description =
     "Get text to audio with few clicks through Artificial Intelligence, DenoLyrics is a web application that understands many languages.";
+
+  const parseLdJson = () => {
+    const data = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map(({ question, answer }) => {
+        return {
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: answer,
+          },
+        };
+      }),
+    };
+    return data;
+  };
   return (
     <>
       <title>DenoLyrics | Audio to Text with AI</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content={description} />
       <meta name="theme-color" content="#180821" />
-      <meta property="og:title" content="DenoLyrics" />
+      <meta property="og:title" content="DenoLyrics | Audio to Text with AI" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={DOMAIN} />
 
@@ -22,15 +42,28 @@ export default function Head() {
       <meta name="twitter:creator" content="@denolyrics" />
       <meta name="twitter:title" content="DenoLyrics" />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content="https://www.denolyrics.com/preview.png" />
+      <meta
+        property="twitter:image"
+        content="https://www.denolyrics.com/preview.png"
+      />
       <meta
         name="keywords"
-        content="DenoLyrics, Audio to Text with AI, El Salvador, Get text to audio with few clicks through Artificial Intelligence,web application that understands many languages."
+        content="DenoLyrics, Audio to Text with AI, El Salvador, aplicacion web para convertir audio a texto, como obtener el texto de un audio, inteligencia artificial para obtener el texto de un archivo mp3,web application that understands many languages"
       />
+      <meta name="robots" content="all" />
+
       <meta property="og:image:width" content="1920" />
       <meta property="og:image:height" content="1080" />
       <link rel="icon" href="/denolyrics.svg" type="image/svg" />
-      <meta property="og:image" content="https://www.denolyrics.com/preview.png" />
+      <meta
+        property="og:image"
+        content="https://www.denolyrics.com/preview.png"
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(parseLdJson()) }}
+      />
     </>
   );
 }

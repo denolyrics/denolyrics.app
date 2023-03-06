@@ -36,7 +36,7 @@ function Faq() {
 
 export default Faq;
 
-const faqs = [
+export const faqs = [
   {
     id: 1,
     question: "What is DenoLyrics?",
