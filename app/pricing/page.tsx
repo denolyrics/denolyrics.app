@@ -1,6 +1,7 @@
 import Faq from "@/components/Faq";
 import Link from "next/link";
 import CounterDiscount from "@/components/CounterDiscount";
+import TryForFree from "@/components/TryForFree";
 function Pricing() {
   return (
     <>
@@ -81,6 +82,8 @@ function Pricing() {
       <br />
       <br />
       <Faq />
+
+      <TryForFree />
     </>
   );
 }
