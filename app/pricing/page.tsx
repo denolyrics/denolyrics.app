@@ -130,7 +130,7 @@ const suscriptions = [
       "Not limit folders",
       "Not limit files",
       "files with 60MB limit",
-      "Share files",
+      "Share folder",
       "Email Support",
     ],
     link: "https://app.denolyrics.com/settings/billing?modal=3",
