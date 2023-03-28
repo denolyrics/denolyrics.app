@@ -26,6 +26,8 @@ export default function Head() {
         property="twitter:image"
         content="https://www.denolyrics.com/preview.png"
       />
+      <meta name="robots" content="all" />
+
       <meta
         name="keywords"
         content="web application,Audio to Text with AI, El Salvador, aplicacion web para convertir audio a texto, como obtener el texto de un audio, inteligencia artificial para obtener el texto de un archivo mp3,web application that understands many languages"
