@@ -10,7 +10,10 @@ function Footer() {
               © {new Date().getFullYear()} DenoLyrics
             </span>
             <div className="flex space-x-6 justify-center m-3">
-              <a href="https://www.facebook.com/Denolyrics2023">
+              <a
+                href="https://www.facebook.com/Denolyrics2023"
+                rel="noreferrer"
+              >
                 <svg
                   className="w-6 h-6"
                   viewBox="0 0 256 256"
@@ -33,7 +36,10 @@ function Footer() {
 
                 <span className="sr-only">Facebook page</span>
               </a>
-              <a href="https://www.linkedin.com/company/denolyrics">
+              <a
+                href="https://www.linkedin.com/company/denolyrics"
+                rel="noreferrer"
+              >
                 <svg
                   className="w-6 h-6"
                   viewBox="0 0 256 256"
@@ -51,7 +57,7 @@ function Footer() {
                 </svg>
                 <span className="sr-only">LinkedIn page</span>
               </a>
-              <a href="https://twitter.com/denolyrics">
+              <a href="https://twitter.com/denolyrics" rel="noreferrer">
                 <svg
                   className="w-6 h-6"
                   viewBox="0 0 256 209"
@@ -68,7 +74,7 @@ function Footer() {
                 </svg>
                 <span className="sr-only">Twitter page</span>
               </a>
-              <a href="https://www.github.com/denolyrics">
+              <a href="https://www.github.com/denolyrics" rel="noreferrer">
                 <svg
                   className="w-6 h-6"
                   viewBox="0 0 256 250"
