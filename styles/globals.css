@@ -29,3 +29,87 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: #363141;
 }
+
+.gradient-shawdow {
+  filter: drop-shadow(0 0 2em #74f9be);
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 8rem;
+  --card-width: 8rem;
+  --border-radius: 20px;
+}
+@media (min-width: 768px) {
+  :root {
+    --card-height: 15rem;
+    --card-width: 15rem;
+    --border-radius: 30px;
+  }
+}
+.card {
+  background: #ffffff;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: var(--border-radius);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(
+    var(--rotate),
+    #43c30d,
+    #b2f974 43%,
+    #b4dc14
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+  filter: drop-shadow(0 0 2em #74f9be);
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.animation-float {
+  animation: float 2.2s ease-in-out infinite both;
+}
+@keyframes float {
+  0% {
+    transform: translateY(5%);
+  }
+
+  50% {
+    transform: translateY(30%);
+  }
+
+  100% {
+    transform: translateY(5%);
+  }
+}

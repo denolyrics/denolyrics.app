@@ -111,37 +111,20 @@ function Navbar() {
             </Link>
           </div>
           <div className="flex justify-end items-end gap-3">
-            <div className="flex justify-center items-center">
-              <Link
-                href="/"
-                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-                  pathname === "/" ? "text-black" : "text-[#6D7073]"
-                }`}
-              >
-                Home
-              </Link>
-            </div>
-            <div className="flex justify-center items-center">
-              <Link
-                href="/pricing"
-                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-                  pathname === "/pricing" ? "text-black" : "text-[#6D7073]"
-                }`}
-              >
-                Pricing
-              </Link>
-            </div>
-            <div className="flex justify-center items-center">
-              <Link
-                href="/help"
-                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-                  pathname === "/help" ? "text-black" : "text-[#6D7073]"
-                }`}
-              >
-                Help
-              </Link>
-            </div>
-
+            {paths.map((path) => {
+              return (
+                <div key={path.id} className="flex justify-center items-center">
+                  <Link
+                    href={path.path}
+                    className={`select-none px-5 py-2.5 font-bold border border-transparent ${
+                      pathname === path.path ? "text-black" : "text-[#6D7073]"
+                    }`}
+                  >
+                    {path.name}
+                  </Link>
+                </div>
+              );
+            })}
             <div className="flex justify-center items-center">
               <Link
                 href="https://app.denolyrics.com"
@@ -158,3 +141,21 @@ function Navbar() {
 }
 
 export default Navbar;
+
+const paths = [
+  {
+    id: "1",
+    name: "Home",
+    path: "/",
+  },
+  {
+    id: "2",
+    name: "Pricing",
+    path: "/pricing",
+  },
+  {
+    id: "3",
+    name: "Notion",
+    path: "/integration-with-notion",
+  },
+];

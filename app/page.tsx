@@ -265,7 +265,9 @@ export default function Home() {
           </svg>
         </div>
         <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 mt-5">
-          <h1 id="title">Audio to Text with AI</h1>
+          <h1 id="title">
+            Audio to Text with AI
+          </h1>
         </div>
         <div className="max-w-screen-md md:m-auto m-3">
           <p id="description" className="text-lg font-normal text-center">
@@ -285,7 +287,7 @@ export default function Home() {
         </div>
         <p className="text-center text-sm">No credit card required</p>
 
-        <div className="drop-shadow-[0_50px_50px_rgba(41,41,54,1)] flex justify-center items-center mt-10 m-3">
+        <div className="gradient-shawdow flex justify-center items-center mt-10 m-3">
           <Image
             unoptimized={true}
             src={"/screenshot.png"}
