@@ -318,9 +318,8 @@ function Notion() {
             </h2>
             <br />
             <p id="description" className="text-xl font-normal max-w-screen-lg">
-              Have you ever wished you could easily save the text of an audio so
-              you can review it later? Well, now {`it's`} possible thanks to
-              Notion!.
+              Simply click the button, Log in to Notion and select the pages
+              where you want to save it.
             </p>
 
             <br />
