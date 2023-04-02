@@ -31,7 +31,7 @@ function Navbar() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-7 h-7"
               >
                 <path
                   strokeLinecap="round"
@@ -61,33 +61,20 @@ function Navbar() {
 
       {ShowItemsMobile && (
         <div className="z-30 px-3 py-3 mt-10 bg-white flex flex-col absolute top-0 right-0 bottom-0 left-0">
-          <Link
-            onClick={() => setShowItemsMobile((valueState) => !valueState)}
-            href="/"
-            className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-              pathname === "/" ? "text-black" : "text-[#6D7073]"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            onClick={() => setShowItemsMobile((valueState) => !valueState)}
-            href="/pricing"
-            className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-              pathname === "/pricing" ? "text-black" : "text-[#6D7073]"
-            }`}
-          >
-            Pricing
-          </Link>
-          <Link
-            onClick={() => setShowItemsMobile((valueState) => !valueState)}
-            href="/help"
-            className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-              pathname === "/help" ? "text-black" : "text-[#6D7073]"
-            }`}
-          >
-            Help
-          </Link>
+          {paths.map((path) => {
+            return (
+              <Link
+                key={path.id}
+                onClick={() => setShowItemsMobile((valueState) => !valueState)}
+                href={path.path}
+                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
+                  pathname === path.path ? "text-black" : "text-[#6D7073]"
+                }`}
+              >
+                {path.name}
+              </Link>
+            );
+          })}
 
           <div className="flex justify-center items-center">
             <Link
