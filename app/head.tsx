@@ -61,11 +61,6 @@ export default function Head() {
         content="https://www.denolyrics.com/preview.png"
       />
 
-      <meta
-        name="google-site-verification"
-        content="3rN3W8BWcrRXixsg6WbNwcxXW9MHqwMXq79RfMutwQs"
-      />
-
       <Script
         id="faq"
         type="application/ld+json"
