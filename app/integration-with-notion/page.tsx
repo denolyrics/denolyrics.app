@@ -361,7 +361,7 @@ function Notion() {
                 unoptimized={true}
                 src={"/notion-screenshot.png"}
                 width="1200"
-                alt=""
+                alt="Notion integration with DenoLyrics"
                 height="550"
               />
             </div>
