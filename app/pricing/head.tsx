@@ -2,7 +2,7 @@ export default function Head() {
   // @ts-ignore
   const DOMAIN =
     process.env.NODE_ENV === "production"
-      ? "https://www.denolyrics.com"
+      ? "https://www.denolyrics.com/pricing"
       : "http://localhost:3000";
 
   const description =
