@@ -24,7 +24,7 @@ export default function Head() {
       <meta property="twitter:description" content={description} />
       <meta
         property="twitter:image"
-        content="https://www.denolyrics.com/notion.png"
+        content="https://www.denolyrics.com/notion-presentation.png"
       />
       <meta name="robots" content="all" />
 
