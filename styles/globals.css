@@ -7,12 +7,10 @@ body {
   font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
-  color: #180821;
+  color: #b6b6c1;
+  background-color: #292936;
 }
 
-p {
-  color: #49525b;
-}
 /* SCROLL BODY */
 body {
   overflow: scroll;
@@ -112,4 +110,31 @@ body::-webkit-scrollbar-thumb {
   100% {
     transform: translateY(5%);
   }
+}
+
+.nav-list-float {
+  z-index: 5000;
+  width: 424px;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgb(130, 137, 148);;
+  border-radius: 32px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: fixed;
+  top: 12px;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+}
+
+.bg-gradient {
+  background-color: #292936;
+  background-image: url("/gradient.png");
+  background-size: cover;
 }
