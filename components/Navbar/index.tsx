@@ -20,7 +20,6 @@ function Navbar() {
           return (
             <Link
               key={path.id}
-              onClick={() => setShowItemsMobile((valueState) => !valueState)}
               href={path.path}
               className={`select-none px-5 py-2.5 font-bold border border-transparent ${
                 pathname === path.path ? "text-white" : ""

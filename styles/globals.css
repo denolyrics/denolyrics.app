@@ -7,7 +7,7 @@ body {
   font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
-  color: #b6b6c1;
+  color: #C4C1D0;
   background-color: #292936;
 }
 
@@ -27,7 +27,6 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: #363141;
 }
-
 .gradient-shawdow {
   filter: drop-shadow(0 0 2em #74f9be);
 }
@@ -41,17 +40,17 @@ body::-webkit-scrollbar-thumb {
 :root {
   --card-height: 8rem;
   --card-width: 8rem;
-  --border-radius: 20px;
+  --border-radius: 25px;
 }
 @media (min-width: 768px) {
   :root {
-    --card-height: 15rem;
-    --card-width: 15rem;
-    --border-radius: 30px;
+    --card-height: 17rem;
+    --card-width: 17rem;
+    --border-radius: 50px;
   }
 }
 .card {
-  background: #ffffff;
+  background: #292936;
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -74,16 +73,15 @@ body::-webkit-scrollbar-thumb {
   border-radius: var(--border-radius);
   background-image: linear-gradient(
     var(--rotate),
-    #43c30d,
-    #b2f974 43%,
-    #b4dc14
+    #393D4F,
+    #74F9BE 43%,
+    #393D4F
   );
   position: absolute;
   z-index: -1;
   top: -1%;
   left: -2%;
   animation: spin 2.5s linear infinite;
-  filter: drop-shadow(0 0 2em #74f9be);
 }
 
 @keyframes spin {
@@ -118,7 +116,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgb(130, 137, 148);;
+  border: 1px solid rgb(130, 137, 148);
   border-radius: 32px;
   flex-direction: row;
   justify-content: center;
@@ -137,4 +135,15 @@ body::-webkit-scrollbar-thumb {
   background-color: #292936;
   background-image: url("/gradient.png");
   background-size: cover;
+}
+
+.bg-gradient-try-free {
+  background-color: #292936;
+  background-image: url("/gradient-2.png");
+  background-size: cover;
+}
+
+
+.shawdow-modal {
+  filter: drop-shadow(0 0 20em #74F9BE);
 }
