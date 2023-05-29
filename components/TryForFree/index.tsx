@@ -268,7 +268,7 @@ function TryForFree() {
         <div className="flex justify-center items-center mt-2">
           <Link
             href="https://app.denolyrics.com"
-            className="select-none text-white bg-black focus:outline-none font-medium rounded-lg inline-flex items-center px-5 py-2.5 mb-2 mt-2 border border-transparent"
+            className="select-none text-white bg-[#292936] hover:bg-black focus:outline-none font-medium rounded-lg inline-flex items-center px-5 py-2.5 mb-2 mt-2 border border-transparent"
             rel="noreferrer"
           >
             Get started for free

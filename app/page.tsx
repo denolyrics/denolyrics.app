@@ -1,19 +1,12 @@
-"use client";
-
-import { useContext } from "react";
 import Faq from "@/components/Faq";
 import Image from "next/image";
 import Link from "next/link";
 
 // CONTEXT
-import NavbarContext from "../context/NavbarContext";
-import { NavbarContextType } from "../context/NavbarContext/types";
 import TryForFree from "@/components/TryForFree";
+import ShareFriends from "./ShareFriends";
 
 export default function Home() {
-  const { ShowItemsMobile } = useContext(NavbarContext) as NavbarContextType;
-
-  if (ShowItemsMobile) return <div />;
   return (
     <main>
       <div className="bg-gradient">
@@ -276,10 +269,10 @@ export default function Home() {
               <div className="flex justify-center items-center">
                 <Link
                   href="https://app.denolyrics.com"
-                  className="select-none text-white hover:shadow-md bg-black focus:outline-none font-medium rounded-lg px-5 py-2.5 border border-transparent"
+                  className="select-none text-white hover:shadow-md bg-[#292936] hover:bg-black focus:outline-none font-medium rounded-lg px-5 py-2.5 border border-transparent"
                 >
-                  Get started
-                </Link>{" "}
+                  Get started for free
+                </Link>
               </div>
             </div>
           </div>
@@ -301,7 +294,7 @@ export default function Home() {
           <div className="flex justify-center items-center mt-10">
             <Link
               href="https://app.denolyrics.com"
-              className="select-none text-white hover:shadow-md bg-black focus:outline-none font-medium rounded-lg inline-flex items-center px-5 py-2.5 mb-2 mt-2 border border-transparent"
+              className="select-none text-white hover:shadow-md bg-[#292936] hover:bg-black focus:outline-none font-medium rounded-lg inline-flex items-center px-5 py-2.5 mb-2 mt-2 border border-transparent"
               rel="noreferrer"
             >
               Get started for free
@@ -320,123 +313,129 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-2 h-screen">
+
+        <div className="flex justify-center items-center">
+          <div className="max-w-screen-xl mt-40">
+            <ol className="items-center flex">
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                    1
+                  </div>
+                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                </div>
+                <div className="mt-3 sm:pr-8">
+                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                    Sign in
+                  </h3>
+                  <p className="font-normal">
+                    Sign in with your favorite provider.
+                  </p>
+                </div>
+              </li>
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                    2
+                  </div>
+                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                </div>
+                <div className="mt-3 sm:pr-8">
+                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                    Create folder
+                  </h3>
+                  <p className="font-normal">
+                    Create a folder to later upload your audio files.
+                  </p>
+                </div>
+              </li>
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                    3
+                  </div>
+                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                </div>
+                <div className="mt-3 sm:pr-8">
+                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                    Upload audio files
+                  </h3>
+                  <p className="font-normal">
+                    Select your audio files with mp3 format.
+                  </p>
+                </div>
+              </li>
+              <li className="relative mb-6 sm:mb-0">
+                <div className="flex items-center">
+                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                    4
+                  </div>
+                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                </div>
+                <div className="mt-3 sm:pr-8">
+                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                    Processing text
+                  </h3>
+                  <p className="font-normal">
+                    Processing audio on the server to get the text.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <ShareFriends />
+      </div>
+      <div className="max-w-screen-2xl m-auto">
+        <div className="grid grid-cols-2 h-[70vh]">
           <div className="grid h-screen place-content-center">
-            <div className="text-3xl md:text-5xl font-extrabold text-center mb-5 mt-5 p-2 max-w-screen-lg m-auto text-[#E7E5E9]">
-              <p>Share folders with your friends</p>
+            <Image
+              unoptimized={true}
+              src={"/notion-screenshot.png"}
+              width={750}
+              alt="Notion integration with DenoLyrics"
+              height={758}
+              className="shawdow-modal"
+            />
+          </div>
+
+          <div className="grid h-screen place-content-center">
+            <div className="flex justify-end">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                strokeWidth={1.5}
+                className="ml-10 w-28 h-28 animate-bounce"
+                viewBox="0 0 256 268"
+                version="1.1"
+                preserveAspectRatio="xMidYMid"
+              >
+                <g>
+                  <path
+                    d="M16.0924984,11.5384656 L164.089991,0.608048392 C182.268719,-0.952166138 186.940447,0.0998642306 198.370133,8.40912104 L245.613429,41.6907258 C253.405586,47.4144843 256,48.9746988 256,55.2066414 L256,237.73391 C256,249.172512 251.845372,255.939385 237.304172,256.973584 L65.4398551,267.377986 C54.5272689,267.895086 49.3295257,266.334872 43.6146827,259.050899 L8.82635648,213.813593 C2.58549836,205.486505 0,199.254562 0,191.970589 L0,29.7261093 C0,20.3737376 4.1546284,12.572665 16.0924984,11.5384656 Z"
+                    fill={"#FFFFFF"}
+                  ></path>
+                  <path
+                    d="M164.089991,0.608048392 L16.0924984,11.5384656 C4.1546284,12.572665 0,20.3737376 0,29.7261093 L0,191.970589 C0,199.254562 2.58549836,205.486505 8.82635648,213.813593 L43.6146827,259.050899 C49.3295257,266.334872 54.5272689,267.895086 65.4398551,267.377986 L237.304172,256.973584 C251.836456,255.939385 256,249.172512 256,237.73391 L256,55.2066414 C256,49.2956572 253.664136,47.5927945 246.790277,42.5466149 C246.394749,42.2616979 245.999494,41.9764014 245.604513,41.6907258 L198.370133,8.40912104 C186.940447,0.0998642306 182.268719,-0.952166138 164.089991,0.608048392 Z M69.3270182,52.219945 C55.2940029,53.1649893 52.1111653,53.3789615 44.1406979,46.8973846 L23.8757401,30.7781396 C21.8162569,28.6919099 22.8504562,26.0885805 28.039284,25.5714809 L170.313018,15.1759943 C182.259804,14.1328795 188.482831,18.2964234 193.154559,21.9339521 L217.556314,39.6134116 C218.599429,40.1394268 221.193843,43.2509404 218.073414,43.2509404 L71.1457825,52.0951279 L69.3270182,52.219945 Z M52.9670544,236.173696 L52.9670544,81.2221043 C52.9670544,74.455231 55.0443686,71.3348019 61.2673957,70.8087867 L230.020199,60.9303999 C235.743958,60.4133002 238.329456,64.0508289 238.329456,70.8087867 L238.329456,224.726179 C238.329456,231.493052 237.286341,237.216811 227.942885,237.73391 L66.4562234,247.095198 C57.1127673,247.612297 52.9670544,244.500784 52.9670544,236.173696 Z M212.376402,89.5313611 C213.410601,94.2120046 212.376402,98.8926482 207.695758,99.4275789 L199.912517,100.969962 L199.912517,215.373807 C193.154559,219.011336 186.931532,221.08865 181.733788,221.08865 C173.424532,221.08865 171.347217,218.485321 165.12419,210.693164 L114.225535,130.614039 L114.225535,208.089834 L130.326949,211.736279 C130.326949,211.736279 130.326949,221.097566 117.337048,221.097566 L81.523438,223.17488 C80.4803232,221.08865 81.523438,215.890907 85.1520513,214.856708 L94.5044229,212.262294 L94.5044229,109.823065 L81.523438,108.771035 C80.4803232,104.090391 83.0747371,97.3324337 90.3497945,96.8064185 L128.77565,94.2209202 L181.733788,175.334245 L181.733788,103.573292 L168.235704,102.021993 C167.192589,96.2893189 171.347217,92.1257749 176.536045,91.6175908 L212.376402,89.5313611 L212.376402,89.5313611 Z"
+                    fill="#000000"
+                  ></path>
+                </g>
+              </svg>
             </div>
-            <div className="max-w-screen-md md:m-auto m-3">
-              <p id="description" className="text-xl font-normal text-center">
-                Simply write your {"friend's"} email, assign them permissions, and
-                they will receive an invitation.
+            <div className="text-3xl md:text-4xl font-extrabold text-right mb-5 mt-5 text-[#C9D1D9]">
+              <p>Save text output on Notion</p>
+            </div>
+            <div className="max-w-screen-sm m-auto">
+              <p id="description" className="text-xl font-normal text-right">
+                Have you ever wished you could easily save the text of an audio
+                so you can review it later? Well, now it's possible thanks to
+                Notion!.
               </p>
             </div>
           </div>
-          <div className="flex justify-center items-center">
-            <div className="bg-[#363141] px-5 py-5 w-[40rem] rounded-md shawdow-modal">
-              <div className="flex items-start justify-between">
-                <h1 className="text-2xl font-bold">Share Podcasts</h1>
-                <button
-                  role="button"
-                  type="button"
-                  className="text-gray-400 bg-transparent hover:text-[#c4c1d0] rounded-lg text-sm p-1.5 ml-auto inline-flex items-center "
-                  data-modal-hide="defaultModal"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                  <span className="sr-only">Close modal</span>
-                </button>
-              </div>
-              <p>Write the email of the person you want to share the file.</p>
-
-              <br />
-              <label htmlFor="name">
-                Add people
-                <input
-                  className={`mt-2 appearance-none border border-gray-700 focus:border-red-300 bg-menu rounded-lg w-full py-3 px-3 text-white leading-tight focus:outline-none focus:shadow-outline`}
-                  id="name"
-                  placeholder="Eg. nelson@gmail.com"
-                  name="name"
-                  type="email"
-                  autoComplete="off"
-                />
-              </label>
-
-              <p className="mt-5 mb-5">People who have access</p>
-
-              <div className="scroll-modal-shared">
-                <div className="flex justify-between p-3 rounded-lg hover:bg-[#363141] mr-2">
-                  <div className="inline-flex gap-2 items-center">
-                    <div>
-                      <Image
-                        className="rounded-full"
-                        width={40}
-                        height={40}
-                        src={"https://app.denolyrics.com/nelsoncode.jpg"}
-                        alt={""}
-                      />
-                    </div>
-
-                    <div className="w-28 md:w-60 truncate">
-                      <p>Nelson Hernandez</p>
-                      <p>nelsonher019@gmail.com</p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <button
-                      role="button"
-                      type="button"
-                      className="inline-flex gap-1 p-3"
-                    >
-                      Owner
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-end gap-2 mt-5">
-                <div>
-                  <button
-                    role="button"
-                    id="submit-users-btn-modal"
-                    type="submit"
-                    className={`select-none text-black hover:shadow-md bg-[#74F9BE] hover:bg-black hover:text-white focus:outline-none font-medium rounded-lg inline-flex items-center px-5 py-2.5 mb-2 mt-2 border border-transparent`}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="mr-2 -ml-1 w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    Submit
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <Faq />
       </div>
+      <Faq />
 
       <TryForFree />
     </main>

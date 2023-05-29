@@ -5,7 +5,7 @@ import TryForFree from "@/components/TryForFree";
 function Pricing() {
   return (
     <>
-      <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 mt-5">
+      <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 mt-20 md:mt-40">
         <h1 id="title">Simple pricing, powerful features</h1>
       </div>
       <div className="flex justify-around mr-10 mt-10">
@@ -15,7 +15,7 @@ function Pricing() {
               <div
                 key={sub.id}
                 id={`Card ${sub.type}`}
-                className="w-full max-w-sm p-4 bg-menu border border-[#56545e] rounded-md shadow-md sm:p-8 ml-5 mr-5"
+                className="w-full max-w-sm p-4 bg-menu border border-[#828994] rounded-md shadow-md sm:p-8 ml-5 mr-5"
               >
                 {sub.duration === pricingOff.type &&
                   pricingOff.expireDate >= new Date().getTime() && (
@@ -48,7 +48,7 @@ function Pricing() {
                         {/* Icon */}
                         <svg
                           aria-hidden="true"
-                          className="flex-shrink-0 w-5 h-5 text-[#292936]"
+                          className="flex-shrink-0 w-5 h-5 text-[#74F9BE]"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                           xmlns="http://www.w3.org/2000/svg"

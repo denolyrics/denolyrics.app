@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   color: #C4C1D0;
-  background-color: #292936;
+  background-color: #363141;
 }
 
 /* SCROLL BODY */
@@ -81,7 +81,7 @@ body::-webkit-scrollbar-thumb {
   z-index: -1;
   top: -1%;
   left: -2%;
-  animation: spin 2.5s linear infinite;
+  animation: spin 5s linear infinite;
 }
 
 @keyframes spin {
@@ -132,13 +132,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bg-gradient {
-  background-color: #292936;
+  background-color: #363141;
   background-image: url("/gradient.png");
   background-size: cover;
 }
 
 .bg-gradient-try-free {
-  background-color: #292936;
+  background-color: #363141;
   background-image: url("/gradient-2.png");
   background-size: cover;
 }
