@@ -12,7 +12,7 @@ export default function Home() {
       <div className="bg-gradient">
         <nav className="hidden md:block font-semibold px-5 py-2">
           <div className="grid grid-cols-2">
-            <div className="inline-flex justify-center items-center">
+            <div className="inline-flex justify-start items-center">
               <svg
                 width={30}
                 height={30}
