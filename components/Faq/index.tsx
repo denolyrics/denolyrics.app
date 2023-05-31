@@ -4,7 +4,7 @@ function Faq() {
       <div className="max-w-screen-xl m-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <p className="text-3xl md:text-5xl font-bold mb-5  text-[#C9D1D9]">
+            <p className="text-3xl md:text-4xl font-extrabold mb-5 mt-5 text-[#C9D1D9]">
               Frequent asked questions
             </p>
 

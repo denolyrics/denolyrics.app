@@ -1,16 +1,16 @@
 import Image from "next/image";
 
-function ShareFriends() {
+function  ShareFriends() {
   return (
     <div className="max-w-screen-2xl m-auto">
-    <div className="grid grid-cols-2 h-[70vh] gap-5">
+    <div className="grid grid-cols-2 h-screen gap-5 m-3">
       <div className="grid h-screen place-content-center">
         <div className="text-3xl md:text-4xl font-extrabold mb-5 mt-5 text-[#C9D1D9]">
           <p>Share folders with your friends</p>
         </div>
         <div className="max-w-screen-sm m-auto">
           <p id="description" className="text-xl font-normal">
-            Simply write your {"friend's"} email, assign them permissions, and
+          We promote collaboration, simply write your {"friend's"} email, assign them permissions, and
             they will receive an invitation.
           </p>
         </div>

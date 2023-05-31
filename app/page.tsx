@@ -314,7 +314,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center m-3">
           <div className="max-w-screen-xl mt-40">
             <ol className="items-center flex">
               <li className="relative mb-6 sm:mb-0">
@@ -385,53 +385,107 @@ export default function Home() {
           </div>
         </div>
         <ShareFriends />
-      </div>
-      <div className="max-w-screen-2xl m-auto">
-        <div className="grid grid-cols-2 h-[70vh]">
-          <div className="grid h-screen place-content-center">
-            <Image
-              unoptimized={true}
-              src={"/notion-screenshot.png"}
-              width={750}
-              alt="Notion integration with DenoLyrics"
-              height={758}
-              className="shawdow-modal"
-            />
-          </div>
 
+        <div className="h-[100vh]">
           <div className="grid h-screen place-content-center">
-            <div className="flex justify-end">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                strokeWidth={1.5}
-                className="ml-10 w-28 h-28 animate-bounce"
-                viewBox="0 0 256 268"
-                version="1.1"
-                preserveAspectRatio="xMidYMid"
-              >
-                <g>
-                  <path
-                    d="M16.0924984,11.5384656 L164.089991,0.608048392 C182.268719,-0.952166138 186.940447,0.0998642306 198.370133,8.40912104 L245.613429,41.6907258 C253.405586,47.4144843 256,48.9746988 256,55.2066414 L256,237.73391 C256,249.172512 251.845372,255.939385 237.304172,256.973584 L65.4398551,267.377986 C54.5272689,267.895086 49.3295257,266.334872 43.6146827,259.050899 L8.82635648,213.813593 C2.58549836,205.486505 0,199.254562 0,191.970589 L0,29.7261093 C0,20.3737376 4.1546284,12.572665 16.0924984,11.5384656 Z"
-                    fill={"#FFFFFF"}
-                  ></path>
-                  <path
-                    d="M164.089991,0.608048392 L16.0924984,11.5384656 C4.1546284,12.572665 0,20.3737376 0,29.7261093 L0,191.970589 C0,199.254562 2.58549836,205.486505 8.82635648,213.813593 L43.6146827,259.050899 C49.3295257,266.334872 54.5272689,267.895086 65.4398551,267.377986 L237.304172,256.973584 C251.836456,255.939385 256,249.172512 256,237.73391 L256,55.2066414 C256,49.2956572 253.664136,47.5927945 246.790277,42.5466149 C246.394749,42.2616979 245.999494,41.9764014 245.604513,41.6907258 L198.370133,8.40912104 C186.940447,0.0998642306 182.268719,-0.952166138 164.089991,0.608048392 Z M69.3270182,52.219945 C55.2940029,53.1649893 52.1111653,53.3789615 44.1406979,46.8973846 L23.8757401,30.7781396 C21.8162569,28.6919099 22.8504562,26.0885805 28.039284,25.5714809 L170.313018,15.1759943 C182.259804,14.1328795 188.482831,18.2964234 193.154559,21.9339521 L217.556314,39.6134116 C218.599429,40.1394268 221.193843,43.2509404 218.073414,43.2509404 L71.1457825,52.0951279 L69.3270182,52.219945 Z M52.9670544,236.173696 L52.9670544,81.2221043 C52.9670544,74.455231 55.0443686,71.3348019 61.2673957,70.8087867 L230.020199,60.9303999 C235.743958,60.4133002 238.329456,64.0508289 238.329456,70.8087867 L238.329456,224.726179 C238.329456,231.493052 237.286341,237.216811 227.942885,237.73391 L66.4562234,247.095198 C57.1127673,247.612297 52.9670544,244.500784 52.9670544,236.173696 Z M212.376402,89.5313611 C213.410601,94.2120046 212.376402,98.8926482 207.695758,99.4275789 L199.912517,100.969962 L199.912517,215.373807 C193.154559,219.011336 186.931532,221.08865 181.733788,221.08865 C173.424532,221.08865 171.347217,218.485321 165.12419,210.693164 L114.225535,130.614039 L114.225535,208.089834 L130.326949,211.736279 C130.326949,211.736279 130.326949,221.097566 117.337048,221.097566 L81.523438,223.17488 C80.4803232,221.08865 81.523438,215.890907 85.1520513,214.856708 L94.5044229,212.262294 L94.5044229,109.823065 L81.523438,108.771035 C80.4803232,104.090391 83.0747371,97.3324337 90.3497945,96.8064185 L128.77565,94.2209202 L181.733788,175.334245 L181.733788,103.573292 L168.235704,102.021993 C167.192589,96.2893189 171.347217,92.1257749 176.536045,91.6175908 L212.376402,89.5313611 L212.376402,89.5313611 Z"
-                    fill="#000000"
-                  ></path>
-                </g>
-              </svg>
+          <div className="flex justify-center items-center">
+            <p className="text-3xl md:text-4xl font-bold mb-5 mt-5 text-[#C9D1D9]">
+              Why DenoLyrics
+            </p>
+          </div>
+          <div className="flex justify-center items-center m-3 mt-20">
+            <div className="max-w-screen-xl">
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-[#2A2D38] p-3 rounded-lg">
+                  <div className="bg-[#74F9BE] w-[65px] h-[60px] rounded-xl relative mb-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="32"
+                      height="32"
+                      fill="#363141"
+                      viewBox="0 0 256 256"
+                      className="w-10 h-10"
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        transform: "translate(30%, -50%)",
+                      }}
+                    >
+                      <path d="M99.06,128.61a8,8,0,0,0-8.72,1.73L68.69,152H48a8,8,0,0,0-8,8v40a8,8,0,0,0,8,8H68.69l21.65,21.66A8,8,0,0,0,104,224V136A8,8,0,0,0,99.06,128.61ZM88,204.69,77.66,194.34A8,8,0,0,0,72,192H56V168H72a8,8,0,0,0,5.66-2.34L88,155.31ZM152,180a40.55,40.55,0,0,1-20,34.91A8,8,0,0,1,124,201.09a24.49,24.49,0,0,0,0-42.18A8,8,0,0,1,132,145.09,40.55,40.55,0,0,1,152,180Zm61.66-97.66-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40v80a8,8,0,0,0,16,0V40h88V88a8,8,0,0,0,8,8h48V216H168a8,8,0,0,0,0,16h32a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160Z"></path>
+                    </svg>
+                  </div>
+                  <h5 className="text-2xl font-semibold ">
+                    Async transcription
+                  </h5>
+                  <p className="text-xl mt-5">
+                    Save and transcribe pre-recorded audio files in seconds,
+                    with our efficient model
+                  </p>
+                </div>
+                <div className="bg-[#2A2D38] p-3 rounded-lg">
+                  <div className="bg-[#74F9BE] w-[65px] h-[60px] rounded-xl relative mb-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#363141"
+                      className="w-10 h-10"
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        transform: "translate(30%, -50%)",
+                      }}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"
+                      />
+                    </svg>
+                  </div>
+                  <h5 className="text-2xl font-semibold ">
+                    Incorporating the most recent advancements in AI
+                  </h5>
+                  <p className="text-xl mt-5">
+                    Access AI models built on the latest breakthroughs in
+                    Transformers and large-scale training on enormous amounts of
+                    data for transcribing speech.
+                  </p>
+                </div>{" "}
+                <div className="bg-[#2A2D38] p-3 rounded-lg">
+                  <div className="bg-[#74F9BE] w-[65px] h-[60px] rounded-xl relative mb-5">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="#363141"
+                      className="w-10 h-10"
+                      style={{
+                        position: "absolute",
+                        top: "50%",
+                        transform: "translate(30%, -50%)",
+                      }}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                      />
+                    </svg>
+                  </div>
+                  <h5 className="text-2xl font-semibold ">
+                    We use the best technologies
+                  </h5>
+                  <p className="text-xl mt-5">
+                    Our team is dedicated to writing quality code with the
+                    latest and greatest in web technology.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="text-3xl md:text-4xl font-extrabold text-right mb-5 mt-5 text-[#C9D1D9]">
-              <p>Save text output on Notion</p>
-            </div>
-            <div className="max-w-screen-sm m-auto">
-              <p id="description" className="text-xl font-normal text-right">
-                Have you ever wished you could easily save the text of an audio
-                so you can review it later? Well, now it's possible thanks to
-                Notion!.
-              </p>
-            </div>
+          </div>
           </div>
         </div>
       </div>
