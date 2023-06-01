@@ -386,8 +386,8 @@ export default function Home() {
         </div>
         <ShareFriends />
 
-        <div className="h-[100vh]">
-          <div className="grid h-screen place-content-center">
+        <div className="h-[50vh]">
+          <div >
           <div className="flex justify-center items-center">
             <p className="text-3xl md:text-4xl font-bold mb-5 mt-5 text-[#C9D1D9]">
               Why DenoLyrics
