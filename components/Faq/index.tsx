@@ -22,7 +22,7 @@ function Faq() {
                     <summary className="font-semibold text-xl cursor-pointer border border-slate-300 rounded-md py-2 px-4 mb-3">
                       {question}
                     </summary>
-                    <div className="text-base font-normal">{answer}</div>
+                    <div className="text-xl font-normal">{answer}</div>
                   </details>
                 </div>
               );
@@ -50,8 +50,7 @@ export const faqs = [
   {
     id: 2,
     question: "What data does DenoLyrics send to the cloud?",
-    answer: `Whisper is a general-purpose speech recognition model. It is trained on a large dataset of diverse audio and is also a multi-task model that can perform multilingual speech recognition as well 
-    as speech translation and language identification.`,
+    answer: `We don't ask for personal information unless we really need it. We keep information on your personal information when you log in, create folders, upload files and acquire our payment plans`,
   },
   {
     id: 3,
@@ -62,7 +61,6 @@ export const faqs = [
   {
     id: 4,
     question: "What payment methods do you accept?",
-    answer: `We accept VISA, Mastercard secured with high security standards, we use
-    PayPal as our platform.`,
+    answer: `We use PayPal as our main platform and also Wompi (Banco Agrícola)`,
   },
 ];

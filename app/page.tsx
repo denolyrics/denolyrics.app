@@ -286,7 +286,7 @@ export default function Home() {
           <div className="max-w-screen-md md:m-auto m-3">
             <p id="description" className="text-xl font-normal text-center">
               DenoLyrics is a web application built with an AI model that
-              supports +300 languages, no matter if the audio speed is fast or
+              supports 143 languages, no matter if the audio speed is fast or
               slow.
             </p>
           </div>
