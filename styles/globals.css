@@ -145,5 +145,5 @@ body::-webkit-scrollbar-thumb {
 
 
 .shawdow-modal {
-  filter: drop-shadow(0 0 20em #74F9BE);
+  filter: drop-shadow(0 0 15em #74F9BE);
 }

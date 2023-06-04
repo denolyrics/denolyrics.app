@@ -27,10 +27,12 @@ export default function Head() {
       }),
     };
     return data;
-  };
+  };  
   return (
     <>
-      <title>DenoLyrics | Audio to Text with AI</title>
+      <title>
+        DenoLyrics | Convert Audio to Text with Artificial Intelligence
+      </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content={description} />
       <meta name="theme-color" content="#180821" />
@@ -49,7 +51,7 @@ export default function Head() {
       />
       <meta
         name="keywords"
-        content="web application,Audio to Text with AI, El Salvador, aplicacion web para convertir audio a texto, como obtener el texto de un audio, inteligencia artificial para obtener el texto de un archivo mp3,web application that understands many languages"
+        content="web application,Audio to Text with AI, El Salvador, Convert Audio to Text with Artificial Intelligence"
       />
       <meta name="robots" content="all" />
 

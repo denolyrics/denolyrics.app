@@ -49,7 +49,7 @@ const paths = [
   },
   {
     id: "3",
-    name: "Notion",
-    path: "/integration-with-notion",
+    name: "What’s New",
+    path: "/releases",
   },
 ];
