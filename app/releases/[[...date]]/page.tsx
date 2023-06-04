@@ -1,9 +1,15 @@
 import NavbarGetStarted from "@/components/NavbarGetStarted";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import path from "path";
 import { promises as fs } from "fs";
 import { marked } from "marked";
+import { stripHtml } from "string-strip-html";
+
+// FUNCTIONS
+import { markdownHeadtoJson } from "@/functions/markdownHeadtoJson";
+import { convertDateToHyphen } from "@/functions/convertDateToHyphen";
 
 type Release = {
   title: string;
@@ -11,60 +17,111 @@ type Release = {
   image: string;
   content: string;
 };
-
-type infoMarkdown = {
-  title: string;
-  date: string;
-  image: string;
-};
-
-function markdownHeadtoJson(markdown: string): infoMarkdown {
-  const arrayInfo = markdown
-    .split("---")[1]
-    .split("\n")
-    .filter((value) => value !== "");
-
-  const resultinArrayObjects = arrayInfo.map((field) => {
-    const key = field.split(":")[0].replace('"', "");
-
-    const value = eval(field);
-
-    return { [key]: value };
-  });
-
-  const resultinSingleObject = resultinArrayObjects.reduce((acc, obj) => {
-    Object.assign(acc, obj);
-    return acc;
-  }, {});
-
-  return resultinSingleObject as infoMarkdown;
-}
-
-async function getData() {
+async function getData(dateSelected: string) {
   const results: Array<Release> = [];
   const releasesDir = path.join(process.cwd(), "releases");
 
   const files = await fs.readdir(releasesDir);
 
-  for (const file of files) {
-    const data = await fs.readFile(`${releasesDir}/${file}`, "utf8");
+  if (dateSelected !== "") {
+    for (const file of files.filter(
+      (file) => file.split(".")[0] === dateSelected
+    )) {
+      const data = await fs.readFile(`${releasesDir}/${file}`, "utf8");
 
-    const markdownContent = data.split("---")[2];
+      const markdownContent = data.split("---")[2];
 
-    const { date, image, title } = markdownHeadtoJson(data);
+      const { date, image, title } = markdownHeadtoJson(data);
 
-    results.push({
-      title,
-      date,
-      image,
-      content: marked.parse(markdownContent),
-    });
+      results.push({
+        title,
+        date,
+        image,
+        content: marked.parse(markdownContent, {
+          mangle: false,
+          headerIds: false,
+        }),
+      });
+    }
+  } else {
+    for (const file of files) {
+      const data = await fs.readFile(`${releasesDir}/${file}`, "utf8");
+
+      const markdownContent = data.split("---")[2];
+
+      const { date, image, title } = markdownHeadtoJson(data);
+
+      results.push({
+        title,
+        date,
+        image,
+        content: marked.parse(markdownContent, {
+          mangle: false,
+          headerIds: false,
+        }),
+      });
+    }
   }
 
   return { results };
 }
-async function Releases() {
-  const data = await getData();
+
+type Props = {
+  params: { date: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const dateParam = Array.isArray(params.date) ? params.date[0] : "";
+  const data = await getData(dateParam);
+
+  if (dateParam !== "" && data.results.length > 0) {
+    const content = data.results[0].content;
+    const firstLineBreak = content.indexOf("\n");
+    return {
+      title: ` ${data.results[0].title} | DenoLyrics`,
+      description: stripHtml(content).result.substring(0, firstLineBreak - 1),
+      keywords: "DenoLyrics, El Salvador",
+      openGraph: {
+        type: "website",
+        url: `/releases/${convertDateToHyphen(data.results[0].date)}`,
+        title: "What’s New | DenoLyrics",
+        description: "Follow us like @DenoLyrics to be pending new updates",
+        siteName: "DenoLyrics",
+        images: [
+          {
+            url: `https://denolyrics.com/releases/${data.results[0].image}}`,
+          },
+        ],
+      },
+      category: "website",
+      themeColor: "#180821",
+    };
+  }
+  return {
+    title: "What’s New | DenoLyrics",
+    description: "Follow us like @DenoLyrics to be pending new updates",
+    keywords: "DenoLyrics, el salvador",
+    openGraph: {
+      type: "website",
+      url: "https://denolyrics.com/releases",
+      title: "What’s New | DenoLyrics",
+      description: "Follow us like @DenoLyrics to be pending new updates",
+      siteName: "DenoLyrics",
+      images: [
+        {
+          url: "https://denolyrics.com/preview.png",
+        },
+      ],
+    },
+    category: "website",
+    themeColor: "#180821",
+  };
+}
+async function Releases({ params }: Props) {
+  const dateParam = Array.isArray(params.date) ? params.date[0] : "";
+
+  const data = await getData(dateParam);
+
   return (
     <>
       <NavbarGetStarted />
@@ -109,14 +166,23 @@ async function Releases() {
             >
               <div>
                 <Link
-                  href="/releases/may-15-2023"
+                  href={`/releases/${convertDateToHyphen(date)}`}
                   className="rounded-lg border w-fit p-2 border-indigo-400 text-indigo-400"
                 >
                   {date}
                 </Link>
+                {dateParam !== "" && (
+                  <>
+                    <br />
+                    <br />
+                    <Link href="/releases" className="hover:underline">
+                      <span className="text-4xl">←</span> Back to all updates
+                    </Link>
+                  </>
+                )}
               </div>
-              <div className="[&>h2]:text-[#C9D1D9] [&>h2]:text-2xl [&>h2]:font-bold">
-                <Link href="/releases/may-15-2023">
+              <div className="[&>h2]:text-[#C9D1D9] [&>h2]:text-3xl [&>h2]:font-bold">
+                <Link href={`/releases/${convertDateToHyphen(date)}`}>
                   <picture>
                     <Image
                       src={`/releases/${image}`}
@@ -128,20 +194,16 @@ async function Releases() {
                   </picture>
                 </Link>
                 <h2>
-                  <Link href="/releases/may-15-2023">{title}</Link>
+                  <Link href={`/releases/${convertDateToHyphen(date)}`}>
+                    {title}
+                  </Link>
                 </h2>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: content,
                   }}
-                  className="[&>p]:my-2"
+                  className="[&>p]:my-2 text-lg"
                 />
-
-                <div className="text-lg">
-                  <Link href="/releases/may-15-2023" className="underline">
-                    Learn more <span className="text-4xl">→</span>
-                  </Link>
-                </div>
               </div>
             </div>
           );

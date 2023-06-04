@@ -22,7 +22,11 @@ function Navbar() {
               key={path.id}
               href={path.path}
               className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-                pathname === path.path ? "text-white" : ""
+                pathname?.includes("releases") && path.path.includes("releases")
+                  ? "text-white"
+                  : pathname === path.path
+                  ? "text-white"
+                  : ""
               }`}
             >
               {path.name}

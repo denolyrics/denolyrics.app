@@ -31,7 +31,7 @@ export default function Head() {
   return (
     <>
       <title>
-        DenoLyrics | Convert Audio to Text with Artificial Intelligence
+        Home | DenoLyrics
       </title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content={description} />
