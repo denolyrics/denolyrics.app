@@ -4,7 +4,7 @@ import Link from "next/link";
 
 // CONTEXT
 import TryForFree from "@/components/TryForFree";
-import ShareFriends from "./ShareFriends";
+import ShareFriends from "./ShareFriends/page";
 
 export default function Home() {
   return (
