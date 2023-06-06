@@ -122,6 +122,10 @@ async function Releases({ params }: Props) {
 
   const data = await getData(dateParam);
 
+  const dataSorted = data.results.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <>
       <NavbarGetStarted />
@@ -155,7 +159,7 @@ async function Releases({ params }: Props) {
           Follow us like @DenoLyrics to be pending new updates
         </a>
 
-        {data.results.map(({ content, date, image, title }) => {
+        {dataSorted.map(({ content, date, image, title }) => {
           return (
             <div
               key={title}
