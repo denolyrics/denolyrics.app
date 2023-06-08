@@ -42,7 +42,6 @@ export async function GET() {
   return new Response(xmlData, {
     status: 200,
     headers: {
-      "Cache-control": "public, s-maxage=86400, stale-while-revalidate",
       "content-type": "application/xml",
     },
   });

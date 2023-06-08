@@ -1,15 +1,61 @@
 import Faq from "@/components/Faq";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from 'next';
+import Script from "next/script";
+import { faqs } from "../components/Faq";
 
 // CONTEXT
 import TryForFree from "@/components/TryForFree";
 import ShareFriends from "./ShareFriends/page";
 import NavbarGetStarted from "@/components/NavbarGetStarted";
 
+export const metadata: Metadata = {
+  title: "Home | DenoLyrics",
+  description: "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
+  keywords: "DenoLyrics, el salvador",
+  openGraph: {
+    type: "website",
+    url: "https://denolyrics.com/",
+    title: "What’s New | DenoLyrics",
+    description: "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
+    siteName: "DenoLyrics",
+    images: [
+      {
+        url: "https://denolyrics.com/preview.png",
+      },
+    ],
+  },
+  category: "website",
+  themeColor: "#180821",
+};
+
+const parseLdJson = () => {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(({ question, answer }) => {
+      return {
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
+        },
+      };
+    }),
+  };
+  return data;
+};  
+
 export default function Home() {
   return (
     <main>
+        <Script
+        id="faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(parseLdJson()) }}
+      />
       <div className="bg-gradient">
         <NavbarGetStarted />
         <div className="md:mt-40">
@@ -42,9 +88,10 @@ export default function Home() {
               unoptimized={true}
               src={"/screenshot.png"}
               width={1200}
-              alt=""
+              alt="Screenshot of the DenoLyrics web app"
               height={550}
               id="screenshot"
+              priority={true}
             />
           </div>
         </div>

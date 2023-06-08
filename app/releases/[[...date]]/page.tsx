@@ -85,7 +85,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         type: "website",
         url: `/releases/${convertDateToHyphen(data.results[0].date)}`,
         title: "What’s New | DenoLyrics",
-        description: "Follow us like @DenoLyrics to be pending new updates",
+        description: "Follow us like @DenoLyrics to be pending new updates.",
         siteName: "DenoLyrics",
         images: [
           {
@@ -99,7 +99,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   return {
     title: "What’s New | DenoLyrics",
-    description: "Follow us like @DenoLyrics to be pending new updates",
+    description: "Follow us like @DenoLyrics to be pending new updates.",
     keywords: "DenoLyrics, el salvador",
     openGraph: {
       type: "website",

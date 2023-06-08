@@ -2,6 +2,29 @@ import Faq from "@/components/Faq";
 import Link from "next/link";
 import CounterDiscount from "@/components/CounterDiscount";
 import TryForFree from "@/components/TryForFree";
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: "Pricing | DenoLyrics",
+  description: "The fastest web app for speech recognition, auto language detection and more. Plans starting at $0/month.",
+  keywords: "DenoLyrics, el salvador, pricing",
+  openGraph: {
+    type: "website",
+    url: "https://denolyrics.com/",
+    title: "What’s New | DenoLyrics",
+    description: "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
+    siteName: "DenoLyrics",
+    images: [
+      {
+        url: "https://denolyrics.com/preview.png",
+      },
+    ],
+  },
+  category: "website",
+  themeColor: "#180821",
+};
+
 function Pricing() {
   return (
     <>
