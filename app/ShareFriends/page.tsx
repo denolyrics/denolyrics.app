@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 function ShareFriends() {
-  const [Content] = useState(["napoleon@gmail.com"]);
+  const [Content] = useState(["napo@gmail.com"]);
 
   const [ShowInvited, setShowInvited] = useState(false);
 
@@ -61,10 +61,10 @@ function ShareFriends() {
     _INTERVAL_VAL = setInterval(Type, 100);
   }, [Content, setShowInvited]);
   return (
-    <div className="max-w-screen-2xl m-auto">
-      <div className="grid grid-cols-2 h-screen gap-5 m-3">
-        <div className="grid h-screen place-content-center">
-          <div className="text-3xl md:text-4xl font-extrabold mb-5 mt-5 text-[#C9D1D9]">
+    <div className="max-w-screen-xl m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 h-screen gap-5 p-3">
+        <div className="md:grid md:h-screen md:place-content-center">
+          <div className="text-3xl md:text-4xl font-extrabold mb-5 mt-5 text-[#C9D1D9] text-center md:text-start">
             <p>Share folders with your friends</p>
           </div>
           <div className="max-w-screen-sm m-auto">
@@ -115,7 +115,7 @@ function ShareFriends() {
             <p className="mt-5 mb-5">People who have access</p>
 
             <div className="scroll-modal-shared">
-              <div className="flex justify-between p-3 rounded-lg hover:bg-[#363141] mr-2">
+              <div className="flex justify-between rounded-lg hover:bg-[#363141] mr-2">
                 <div className="inline-flex gap-2 items-center">
                   <div>
                     <Image
@@ -127,7 +127,7 @@ function ShareFriends() {
                     />
                   </div>
 
-                  <div className="w-28 md:w-60 truncate">
+                  <div className="w-auto md:w-60">
                     <p>Nelson Hernandez</p>
                     <p>nelson@gmail.com</p>
                   </div>
@@ -145,7 +145,7 @@ function ShareFriends() {
               </div>
 
               {ShowInvited && (
-                <div className="flex justify-between p-3 rounded-lg hover:bg-[#363141] mr-2 animationin">
+                <div className="flex justify-between rounded-lg hover:bg-[#363141] mr-2 animationin mt-2">
                   <div className="inline-flex gap-2 items-center">
                     <div>
                       <Image
@@ -157,9 +157,9 @@ function ShareFriends() {
                       />
                     </div>
 
-                    <div className="w-28 md:w-60 truncate">
-                      <p>Nelson Hernandez</p>
-                      <p>napoleon@gmail.com</p>
+                    <div className="w-auto md:w-60">
+                      <p>Napoleón Pérez</p>
+                      <p>napo@gmail.com</p>
                     </div>
                   </div>
 

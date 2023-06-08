@@ -7,7 +7,7 @@ body {
   font-family: "Inter", sans-serif;
   padding: 0;
   margin: 0;
-  color: #C4C1D0;
+  color: #c4c1d0;
   background-color: #363141;
 }
 
@@ -38,8 +38,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 :root {
-  --card-height: 8rem;
-  --card-width: 8rem;
+  --card-height: 10rem;
+  --card-width: 10rem;
   --border-radius: 25px;
 }
 @media (min-width: 768px) {
@@ -73,9 +73,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: var(--border-radius);
   background-image: linear-gradient(
     var(--rotate),
-    #393D4F,
-    #74F9BE 43%,
-    #393D4F
+    #393d4f,
+    #74f9be 43%,
+    #393d4f
   );
   position: absolute;
   z-index: -1;
@@ -137,15 +137,16 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 
-.bg-gradient-try-free {
-  background-color: #363141;
-  background-image: url("/gradient-2.png");
-  background-size: cover;
+@media (min-width: 768px) {
+  .bg-gradient-try-free {
+    background-color: #363141;
+    background-image: url("/gradient-2.png");
+    background-size: cover;
+  }
 }
 
-
 .shawdow-modal {
-  filter: drop-shadow(0 0 15em #74F9BE);
+  filter: drop-shadow(0 0 15em #74f9be);
 }
 
 .animationin {

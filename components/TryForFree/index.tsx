@@ -3,15 +3,15 @@ import Link from "next/link";
 function TryForFree() {
   return (
     <>
-    <br /><br />
+      <br />
+      <br />
       <div className="flex justify-center items-center">
         <div className="card">
           <svg
-            width={200}
-            height={200}
             viewBox="0 0 182 194"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="w-[125px] h-[125px] md:w-[200px] md:h-[200px]"
           >
             <g id="denolyrics">
               <g id="Clip path group">

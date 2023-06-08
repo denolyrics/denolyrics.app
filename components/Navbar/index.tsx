@@ -15,24 +15,27 @@ function Navbar() {
   ) as NavbarContextType;
   return (
     <>
-      <div className="nav-list-float">
-        {paths.map((path) => {
-          return (
-            <Link
-              key={path.id}
-              href={path.path}
-              className={`select-none px-5 py-2.5 font-bold border border-transparent ${
-                pathname?.includes("releases") && path.path.includes("releases")
-                  ? "text-white"
-                  : pathname === path.path
-                  ? "text-white"
-                  : ""
-              }`}
-            >
-              {path.name}
-            </Link>
-          );
-        })}
+      <div className="hidden">
+        <div className="nav-list-float">
+          {paths.map((path) => {
+            return (
+              <Link
+                key={path.id}
+                href={path.path}
+                className={`select-none px-5 py-2.5 font-bold border border-transparent ${
+                  pathname?.includes("releases") &&
+                  path.path.includes("releases")
+                    ? "text-white"
+                    : pathname === path.path
+                    ? "text-white"
+                    : ""
+                }`}
+              >
+                {path.name}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </>
   );

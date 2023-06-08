@@ -12,8 +12,8 @@ export default function Home() {
     <main>
       <div className="bg-gradient">
         <NavbarGetStarted />
-        <div className="mt-20 md:mt-40">
-          <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 mt-5 p-2 max-w-screen-lg m-auto bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6b637b]">
+        <div className="md:mt-40">
+          <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 md:mt-5 p-2 max-w-screen-lg m-auto bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6b637b]">
             <h1 id="title">
               Convert Audio to Text with Artificial Intelligence
             </h1>
@@ -49,12 +49,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center items-center m-3">
-          <div className="max-w-screen-xl mt-40">
-            <ol className="items-center flex">
+        <div className="flex flex-row justify-center items-center m-3">
+          <div className="max-w-screen-xl mt-20 md:mt-40">
+            <ol className="md:flex md:items-center text-center md:text-start">
               <li className="relative mb-6 sm:mb-0">
-                <div className="flex items-center">
-                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                <div className="flex justify-center items-center">
+                  <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     1
                   </div>
                   <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
@@ -69,8 +69,8 @@ export default function Home() {
                 </div>
               </li>
               <li className="relative mb-6 sm:mb-0">
-                <div className="flex items-center">
-                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                <div className="flex justify-center items-center">
+                  <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     2
                   </div>
                   <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
@@ -85,8 +85,8 @@ export default function Home() {
                 </div>
               </li>
               <li className="relative mb-6 sm:mb-0">
-                <div className="flex items-center">
-                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                <div className="flex justify-center items-center">
+                  <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     3
                   </div>
                   <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
@@ -101,8 +101,8 @@ export default function Home() {
                 </div>
               </li>
               <li className="relative mb-6 sm:mb-0">
-                <div className="flex items-center">
-                  <div className="z-10 flex items-center justify-center w-6 h-6 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                <div className="flex justify-center items-center">
+                  <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     4
                   </div>
                   <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
         <ShareFriends />
 
-        <div className="h-[50vh]">
+        <div className="mt-5 md:h-[60vh]">
           <div>
             <div className="flex justify-center items-center">
               <p className="text-3xl md:text-4xl font-bold mb-5 mt-5 text-[#C9D1D9]">
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             <div className="flex justify-center items-center m-3 mt-20">
               <div className="max-w-screen-xl">
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   <div className="bg-[#2A2D38] p-3 rounded-lg">
                     <div className="bg-[#74F9BE] w-[65px] h-[60px] rounded-xl relative mb-5">
                       <svg

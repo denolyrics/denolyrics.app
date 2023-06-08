@@ -1,14 +1,14 @@
 function Faq() {
   return (
-    <div className="grid h-[70vh] place-content-center">
+    <div className="grid md:h-[70vh] place-content-center p-3">
       <div className="max-w-screen-xl m-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <p className="text-3xl md:text-4xl font-bold mb-5 mt-5 text-[#C9D1D9]">
+            <p className="text-3xl md:text-4xl font-bold mb-5 mt-5 text-[#C9D1D9] text-center md:text-left">
               Frequent asked questions
             </p>
 
-            <p className="mt-2 text-xl font-normal mb-4 m-3 md:m-0">
+            <p className="mt-2 text-xl font-normal mb-4 md:m-0">
               These are frequently asked questions that we have collected, if
               you have any suggestions or questions do not hesitate to send us
               an email to the support team.
@@ -17,7 +17,7 @@ function Faq() {
           <div>
             {faqs.map(({ id, question, answer }) => {
               return (
-                <div key={id} className="w-full px-4 py-2">
+                <div key={id} className="w-full md:px-4 py-2">
                   <details className="mb-4">
                     <summary className="font-semibold text-xl cursor-pointer border border-slate-300 rounded-md py-2 px-4 mb-3">
                       {question}
