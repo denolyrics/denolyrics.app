@@ -129,7 +129,7 @@ async function Releases({ params }: Props) {
   return (
     <>
       <NavbarGetStarted />
-      <div className="max-w-screen-lg m-auto mt-20 md:mt-20">
+      <div className="max-w-screen-lg m-auto mt-20 md:mt-20 p-3">
         <div className="text-3xl md:text-4xl font-extrabold mb-5 mt-5 text-[#C9D1D9]">
           <h1>What’s New</h1>
         </div>
@@ -161,13 +161,7 @@ async function Releases({ params }: Props) {
 
         {dataSorted.map(({ content, date, image, title }) => {
           return (
-            <div
-              key={title}
-              className="grid mt-20"
-              style={{
-                gridTemplateColumns: "25% 75%",
-              }}
-            >
+            <div key={title} className="grid mt-20 grid-release gap-5 md:gap-0 p-3">
               <div>
                 <Link
                   href={`/releases/${convertDateToHyphen(date)}`}
@@ -193,7 +187,7 @@ async function Releases({ params }: Props) {
                       alt=""
                       width={808}
                       height={455}
-                      className="w-[808px] h-[455px] rounded-lg mb-10"
+                      className="h-[230px] w-full  md:w-[808px] md:h-[455px] rounded-lg mb-10"
                     />
                   </picture>
                 </Link>

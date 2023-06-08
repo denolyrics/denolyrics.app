@@ -15,7 +15,7 @@ function Navbar() {
   ) as NavbarContextType;
   return (
     <>
-      <div className="hidden">
+      <div className="">
         <div className="nav-list-float">
           {paths.map((path) => {
             return (

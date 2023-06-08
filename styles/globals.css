@@ -162,3 +162,15 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 }
+
+/* RELEASE */
+
+.grid-release {
+  grid-template-columns: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid-release {
+    grid-template-columns: 25% 75%;
+  }
+}
