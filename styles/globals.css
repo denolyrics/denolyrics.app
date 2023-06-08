@@ -147,3 +147,17 @@ body::-webkit-scrollbar-thumb {
 .shawdow-modal {
   filter: drop-shadow(0 0 15em #74F9BE);
 }
+
+.animationin {
+  animation: fadein 0.5s;
+}
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 100px;
+    opacity: 1;
+  }
+}
