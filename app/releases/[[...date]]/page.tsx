@@ -70,6 +70,26 @@ type Props = {
   params: { date: string };
 };
 
+let MetadataRelease = {
+  title: "What’s New | DenoLyrics",
+  description: "Follow us like @DenoLyrics to be pending new updates.",
+  keywords: "DenoLyrics, el salvador",
+  openGraph: {
+    type: "website",
+    url: "https://denolyrics.com/releases",
+    title: "What’s New | DenoLyrics",
+    description: "Follow us like @DenoLyrics to be pending new updates",
+    siteName: "DenoLyrics",
+    images: [
+      {
+        url: "https://denolyrics.com/preview.png",
+      },
+    ],
+  },
+  category: "website",
+  themeColor: "#180821",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dateParam = Array.isArray(params.date) ? params.date[0] : "";
   const data = await getData(dateParam);
@@ -77,45 +97,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (dateParam !== "" && data.results.length > 0) {
     const content = data.results[0].content;
     const firstLineBreak = content.indexOf("\n");
-    return {
-      title: ` ${data.results[0].title} | DenoLyrics`,
-      description: stripHtml(content).result.substring(0, firstLineBreak - 1),
-      keywords: "DenoLyrics, El Salvador",
-      openGraph: {
-        type: "website",
-        url: `/releases/${convertDateToHyphen(data.results[0].date)}`,
-        title: "What’s New | DenoLyrics",
-        description: "Follow us like @DenoLyrics to be pending new updates.",
-        siteName: "DenoLyrics",
-        images: [
-          {
-            url: `https://denolyrics.com/releases/${data.results[0].image}}`,
-          },
-        ],
+
+    MetadataRelease.title = `${data.results[0].title} | DenoLyrics`;
+    MetadataRelease.openGraph.title = `${data.results[0].title} | DenoLyrics`;
+    MetadataRelease.description = stripHtml(content).result.substring(
+      0,
+      firstLineBreak - 1
+    );
+    MetadataRelease.openGraph.description = stripHtml(content).result.substring(
+      0,
+      firstLineBreak - 1
+    );
+    MetadataRelease.openGraph.url = `/releases/${convertDateToHyphen(
+      data.results[0].date
+    )}`;
+    MetadataRelease.openGraph.images = [
+      {
+        url: `/releases/${data.results[0].image}}`,
       },
-      category: "website",
-      themeColor: "#180821",
-    };
+    ];
+    return MetadataRelease;
   }
-  return {
-    title: "What’s New | DenoLyrics",
-    description: "Follow us like @DenoLyrics to be pending new updates.",
-    keywords: "DenoLyrics, el salvador",
-    openGraph: {
-      type: "website",
-      url: "https://denolyrics.com/releases",
-      title: "What’s New | DenoLyrics",
-      description: "Follow us like @DenoLyrics to be pending new updates",
-      siteName: "DenoLyrics",
-      images: [
-        {
-          url: "https://denolyrics.com/preview.png",
-        },
-      ],
-    },
-    category: "website",
-    themeColor: "#180821",
-  };
+  return MetadataRelease;
 }
 async function Releases({ params }: Props) {
   const dateParam = Array.isArray(params.date) ? params.date[0] : "";
@@ -161,7 +164,10 @@ async function Releases({ params }: Props) {
 
         {dataSorted.map(({ content, date, image, title }) => {
           return (
-            <div key={title} className="grid mt-20 grid-release gap-5 md:gap-0 p-3">
+            <div
+              key={title}
+              className="grid mt-20 grid-release gap-6 md:gap-0 p-3"
+            >
               <div>
                 <Link
                   href={`/releases/${convertDateToHyphen(date)}`}
@@ -186,8 +192,8 @@ async function Releases({ params }: Props) {
                       src={`/releases/${image}`}
                       alt=""
                       width={808}
-                      height={455}
-                      className="h-[230px] w-full  md:w-[808px] md:h-[455px] rounded-lg mb-10"
+                      height={420}
+                      className="h-[200px] w-full md:w-[808px] md:h-[320px] lg:h-[420px] rounded-lg mb-10"
                     />
                   </picture>
                 </Link>
