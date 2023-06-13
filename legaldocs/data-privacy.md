@@ -9,7 +9,7 @@ At DenoLyrics, we consider your privacy extremely important to us. These are the
 - We do not share your personal information with anyone except to provide you with services, products, comply with the law, or protect our rights.
 - We will use the personal information you provide us in accordance with this privacy policy.
 
-# [How we use the information we collect](how-we-use-the-information-we-collect)
+# [How we use the information we collect](#how-we-use-the-information-we-collect)
 
 We use the information we have about you in the following ways:
 
@@ -17,12 +17,12 @@ We use the information we have about you in the following ways:
 - To provide you with information about other goods and services we offer that are similar to those you have already purchased or inquired about.
 
 
-# [Disclosure of your information](disclosure-of-your-information)
+# [Disclosure of your information](#disclosure-of-your-information)
 
 We don't share your information with third services unless required, for example, when you purchase a payment plan the platform we use to collect (PayPal, Wompi) they will access your personal information to identify the person who made the payment.
 
 
-# [Where we transfer and store your information](where-we-transfer-and-store-your-information)
+# [Where we transfer and store your information](#where-we-transfer-and-store-your-information)
 
 All information you provide to us is stored on our secure servers. Where we have provided you (or you have chosen) a password that enables you to access certain parts of our site, you are responsible for keeping this password confidential. We ask that you do not share a password with anyone.
 
