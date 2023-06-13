@@ -2,6 +2,7 @@ type infoMarkdown = {
   title: string;
   date: string;
   image: string;
+  author: string
 };
 export function markdownHeadtoJson(markdown: string): infoMarkdown {
   const arrayInfo = markdown
@@ -11,7 +12,7 @@ export function markdownHeadtoJson(markdown: string): infoMarkdown {
 
   const resultinArrayObjects = arrayInfo.map((field) => {
     const key = field.split(":")[0].replace('"', "");
-
+    
     const value = eval(field);
 
     return { [key]: value };

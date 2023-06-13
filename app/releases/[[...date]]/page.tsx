@@ -16,6 +16,7 @@ type Release = {
   date: string;
   image: string;
   content: string;
+  author: string;
 };
 async function getData(dateSelected: string) {
   const results: Array<Release> = [];
@@ -31,16 +32,17 @@ async function getData(dateSelected: string) {
 
       const markdownContent = data.split("---")[2];
 
-      const { date, image, title } = markdownHeadtoJson(data);
+      const { date, image, title, author } = markdownHeadtoJson(data);
 
       results.push({
         title,
         date,
         image,
+        author,
         content: marked.parse(markdownContent, {
           mangle: false,
           headerIds: false,
-        }),
+        })
       });
     }
   } else {
@@ -49,12 +51,13 @@ async function getData(dateSelected: string) {
 
       const markdownContent = data.split("---")[2];
 
-      const { date, image, title } = markdownHeadtoJson(data);
+      const { date, image, title, author } = markdownHeadtoJson(data);
 
       results.push({
         title,
         date,
         image,
+        author,
         content: marked.parse(markdownContent, {
           mangle: false,
           headerIds: false,
@@ -85,6 +88,8 @@ let MetadataRelease = {
         url: "https://denolyrics.com/preview.png",
       },
     ],
+    publishedTime: "",
+    authors: [""],
   },
   category: "website",
   themeColor: "#180821",
@@ -116,6 +121,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         url: `/releases/${data.results[0].image}}`,
       },
     ];
+    MetadataRelease.openGraph.type = "article";
+
+    MetadataRelease.openGraph.publishedTime = new Date(
+      data.results[0].date
+    ).toISOString();
+    MetadataRelease.openGraph.authors = [data.results[0].author];
+
     return MetadataRelease;
   }
   return MetadataRelease;
