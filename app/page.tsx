@@ -7,7 +7,7 @@ import { faqs } from "../components/Faq";
 
 // CONTEXT
 import TryForFree from "@/components/TryForFree";
-import ShareFriends from "./ShareFriends/page";
+import ShareFriends from "@/components/ShareFriends/page";
 import NavbarGetStarted from "@/components/NavbarGetStarted";
 
 export const metadata: Metadata = {
@@ -27,6 +27,18 @@ export const metadata: Metadata = {
         url: "https://denolyrics.com/preview.png",
         width: 1920,
         height: 1080,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Home | DenoLyrics",
+    description:
+      "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
+    creator: "@denolyrics",
+    images: [
+      {
+        url: "https://denolyrics.com/preview.png",
       },
     ],
   },
