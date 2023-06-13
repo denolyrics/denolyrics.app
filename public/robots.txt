@@ -8,6 +8,11 @@ Allow: /pricing
 
 # Allow all crawlers
 User-agent: *
-Allow: /help
+Allow: /releases
+
+# Allow all crawlers
+User-agent: *
+Allow: /privacy-policy
+
 
 Sitemap: https://www.denolyrics.com/sitemap.xml
