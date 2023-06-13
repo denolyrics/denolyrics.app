@@ -42,7 +42,7 @@ async function getData(dateSelected: string) {
         content: marked.parse(markdownContent, {
           mangle: false,
           headerIds: false,
-        })
+        }),
       });
     }
   } else {
@@ -91,6 +91,17 @@ let MetadataRelease = {
     publishedTime: "",
     authors: [""],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "What’s New | DenoLyrics",
+    description: "Follow us like @DenoLyrics to be pending new updates",
+    creator: "@denolyrics",
+    images: [
+      {
+        url: "https://denolyrics.com/preview.png",
+      },
+    ],
+  },
   category: "website",
   themeColor: "#180821",
 };
@@ -105,6 +116,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     MetadataRelease.title = `${data.results[0].title} | DenoLyrics`;
     MetadataRelease.openGraph.title = `${data.results[0].title} | DenoLyrics`;
+    MetadataRelease.twitter.title = `${data.results[0].title} | DenoLyrics`;
     MetadataRelease.description = stripHtml(content).result.substring(
       0,
       firstLineBreak - 1
@@ -113,10 +125,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       0,
       firstLineBreak - 1
     );
+    MetadataRelease.twitter.description = stripHtml(content).result.substring(
+      0,
+      firstLineBreak - 1
+    );
     MetadataRelease.openGraph.url = `/releases/${convertDateToHyphen(
       data.results[0].date
     )}`;
     MetadataRelease.openGraph.images = [
+      {
+        url: `/releases/${data.results[0].image}}`,
+      },
+    ];
+    MetadataRelease.twitter.images = [
       {
         url: `/releases/${data.results[0].image}}`,
       },
