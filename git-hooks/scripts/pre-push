@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+npm run lint
+
+if [[ "$?" -ne 0 ]]; then
+  echo "Linting errors found. Please fix them before pushing."
+fi
