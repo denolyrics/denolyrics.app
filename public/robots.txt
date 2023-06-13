@@ -10,8 +10,4 @@ Allow: /pricing
 User-agent: *
 Allow: /help
 
-# Allow all crawlers
-User-agent: *
-Allow: /integration-with-notion
-
 Sitemap: https://www.denolyrics.com/sitemap.xml
