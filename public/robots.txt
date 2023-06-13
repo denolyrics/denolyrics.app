@@ -14,5 +14,4 @@ Allow: /releases
 User-agent: *
 Allow: /privacy-policy
 
-
 Sitemap: https://www.denolyrics.com/sitemap.xml
