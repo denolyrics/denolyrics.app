@@ -19,6 +19,11 @@ fi
 # Copy all files from the source directory to the destination directory
 for file in "$src_dir"/*; do
   cp -r "$file" "$dst_dir"
+
+  # SPLIT DIRECTORIES AND GET LAST VALUE BY EXAMPLE git-hooks/scripts/pre-commit -> pre-commit
+  script_name=$(echo "$file" | awk -F'/' '{print $NF}')
+
+  chmod +x "$dst_dir/$script_name"
 done
 
 echo "✅ Git Hooks successfully copied"
