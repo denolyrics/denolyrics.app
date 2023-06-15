@@ -4,4 +4,5 @@ npm run lint
 
 if [[ "$?" -ne 0 ]]; then
   echo "Linting errors found. Please fix them before pushing."
+  return 1
 fi
