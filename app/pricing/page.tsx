@@ -3,6 +3,7 @@ import Link from "next/link";
 import CounterDiscount from "@/components/CounterDiscount";
 import TryForFree from "@/components/TryForFree";
 import { Metadata } from "next";
+import NavbarGetStarted from "@/components/NavbarGetStarted";
 
 export const metadata: Metadata = {
   title: "Pricing | DenoLyrics",
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
 function Pricing() {
   return (
     <>
+      <NavbarGetStarted />
       <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 mt-20 md:mt-40">
         <h1 id="title">Simple pricing, powerful features</h1>
       </div>

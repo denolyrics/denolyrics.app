@@ -1,21 +1,12 @@
 "use client";
-import { useContext } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// CONTEXT
-
-import NavbarContext from "../../context/NavbarContext";
-import { NavbarContextType } from "../../context/NavbarContext/types";
-
 function Navbar() {
   const pathname = usePathname();
-  const { ShowItemsMobile, setShowItemsMobile } = useContext(
-    NavbarContext
-  ) as NavbarContextType;
   return (
     <>
-      <div className="">
+      <div className="hidden md:block">
         <div className="nav-list-float">
           {paths.map((path) => {
             return (

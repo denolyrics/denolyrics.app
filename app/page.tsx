@@ -76,7 +76,7 @@ export default function Home() {
       <div className="bg-gradient">
         <NavbarGetStarted />
         <div className="md:mt-40">
-          <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 md:mt-5 p-2 max-w-screen-lg m-auto bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6b637b]">
+          <div className="text-3xl md:text-6xl font-extrabold text-center mb-5 pt-20 md:mt-5 p-2 max-w-screen-lg m-auto bg-clip-text text-transparent bg-gradient-to-r from-white to-[#6b637b]">
             <h1 id="title">
               Convert Audio to Text with Artificial Intelligence
             </h1>

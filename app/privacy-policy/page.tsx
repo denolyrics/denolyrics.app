@@ -2,18 +2,20 @@ import path from "path";
 import { promises as fs } from "fs";
 import { marked } from "marked";
 import Link from "next/link";
-import { Metadata } from 'next';
-
+import { Metadata } from "next";
+import NavbarGetStarted from "@/components/NavbarGetStarted";
 
 export const metadata: Metadata = {
   title: "Privacy policy | DenoLyrics",
-  description: "The fastest web app for speech recognition, auto language detection and more. Plans starting at $0/month.",
+  description:
+    "The fastest web app for speech recognition, auto language detection and more. Plans starting at $0/month.",
   keywords: "DenoLyrics, el salvador, Privacy policy",
   openGraph: {
     type: "website",
     url: "https://denolyrics.com/",
     title: "What’s New | DenoLyrics",
-    description: "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
+    description:
+      "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
     siteName: "DenoLyrics",
     images: [
       {
@@ -79,37 +81,58 @@ async function PrivacyPolicy() {
   }> = parseHTML(content);
 
   return (
-    <div className="max-w-screen-xl m-auto">
-      <div className="p-3 md:mt-40 scroll-smooth">
-        <div className="grid grid-cols-1 grid-content-privacy gap-5">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: content,
-            }}
-            className="[&>p]:text-lg [&>h1]:text-2xl [&>h1]:font-bold [&>h1]:py-3 [&>p]:py-3 [&>ul>li]:py-3 [&>ul]:list-disc [&>ul]:ml-5"
-          />
+    <>
+      <NavbarGetStarted />
+      <div className="max-w-screen-xl m-auto">
+        <div className="p-3 md:mt-40 scroll-smooth">
+          <div className="grid grid-cols-1 grid-content-privacy gap-5">
+          <div className="md:hidden block px-3 border border-r-transparent border-y-transparent border-gray-400">
+              <h1 className="text-2xl font-bold">Contents</h1>
+              <br />
+              <ul className="list-none">
+                {data.map((h1Value) => {
+                  return (
+                    <li
+                      key={h1Value.id}
+                      className="py-2 hover:text-indigo-400 hover:underline cursor-pointer text-lg"
+                    >
+                      <Link href={`/privacy-policy${h1Value.id}`}>
+                        {h1Value.value}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: content,
+              }}
+              className="[&>p]:text-lg [&>h1]:text-2xl [&>h1]:font-bold [&>h1]:py-3 [&>p]:py-3 [&>ul>li]:py-3 [&>ul]:list-disc [&>ul]:ml-5"
+            />
 
-          <div className="px-3 border border-r-transparent border-y-transparent border-gray-400">
-            <h1 className="text-2xl font-bold">Contents</h1>
-            <br />
-            <ul className="list-none">
-              {data.map((h1Value) => {
-                return (
-                  <li
-                    key={h1Value.id}
-                    className="py-2 hover:text-indigo-400 hover:underline cursor-pointer text-lg"
-                  >
-                    <Link href={`/privacy-policy${h1Value.id}`}>
-                      {h1Value.value}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+            <div className="hidden md:block px-3 border border-r-transparent border-y-transparent border-gray-400">
+              <h1 className="text-2xl font-bold">Contents</h1>
+              <br />
+              <ul className="list-none">
+                {data.map((h1Value) => {
+                  return (
+                    <li
+                      key={h1Value.id}
+                      className="py-2 hover:text-indigo-400 hover:underline cursor-pointer text-lg"
+                    >
+                      <Link href={`/privacy-policy${h1Value.id}`}>
+                        {h1Value.value}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

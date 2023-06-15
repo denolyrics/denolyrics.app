@@ -6,7 +6,7 @@ function FeaturesDeno() {
     "text" | "captions" | "summarize" | "translate"
   >("text");
   return (
-    <div className="max-w-screen-xl m-auto">
+    <div className="max-w-screen-xl m-auto mt-5">
       <div className="grid grid-cols-1 md:grid-cols-2 h-screen gap-5 p-3">
         <div className="shawdow-modal">
           <div className="bg-[#363141] p-3 mt-4 rounded-t-lg">
