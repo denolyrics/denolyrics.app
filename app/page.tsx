@@ -9,6 +9,7 @@ import { faqs } from "../components/Faq";
 import TryForFree from "@/components/TryForFree";
 import ShareFriends from "@/components/ShareFriends/page";
 import NavbarGetStarted from "@/components/NavbarGetStarted";
+import FeaturesDeno from "@/components/FeaturesDeno";
 
 export const metadata: Metadata = {
   title: "Home | DenoLyrics",
@@ -114,13 +115,13 @@ export default function Home() {
 
         <div className="flex flex-row justify-center items-center m-3">
           <div className="max-w-screen-xl mt-20 md:mt-40">
-            <ol className="md:flex md:items-center text-center md:text-start">
+            <ol className="lg:flex lg:items-center text-center lg:text-start">
               <li className="relative mb-6 sm:mb-0">
                 <div className="flex justify-center items-center">
                   <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     1
                   </div>
-                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                  <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
                   <h3 className="text-2xl font-semibold text-[#C9D1D9]">
@@ -136,7 +137,7 @@ export default function Home() {
                   <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     2
                   </div>
-                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                  <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
                   <h3 className="text-2xl font-semibold text-[#C9D1D9]">
@@ -152,7 +153,7 @@ export default function Home() {
                   <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     3
                   </div>
-                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                  <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
                   <h3 className="text-2xl font-semibold text-[#C9D1D9]">
@@ -168,7 +169,7 @@ export default function Home() {
                   <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
                     4
                   </div>
-                  <div className="hidden sm:flex w-full bg-[#828994] h-0.5" />
+                  <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
                   <h3 className="text-2xl font-semibold text-[#C9D1D9]">
@@ -184,14 +185,16 @@ export default function Home() {
         </div>
         <ShareFriends />
 
-        <div className="mt-5 md:h-[60vh]">
+        <FeaturesDeno />
+
+        <div className="mt-24 md:mt-5 md:h-[60vh]">
           <div>
             <div className="flex justify-center items-center">
-              <p className="text-3xl md:text-4xl font-bold mb-5 mt-5 text-[#C9D1D9]">
+              <p className="text-3xl md:text-4xl font-bold mt-5 text-[#C9D1D9]">
                 Why DenoLyrics
               </p>
             </div>
-            <div className="flex justify-center items-center m-3 mt-20">
+            <div className="flex justify-center items-center m-3 mt-10">
               <div className="max-w-screen-xl">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                   <div className="bg-[#2A2D38] p-3 rounded-lg">

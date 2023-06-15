@@ -31,6 +31,14 @@ body::-webkit-scrollbar-thumb {
   filter: drop-shadow(0 0 2em #74f9be);
 }
 
+.bg-active {
+  background: #444250;
+}
+
+.bg-active-hover:hover {
+  background: #444250;
+}
+
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
@@ -175,9 +183,35 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-
 @media (min-width: 768px) {
   .grid-content-privacy {
     grid-template-columns: 75% 25%;
   }
+}
+
+/* SCROLL OUTPUT TRACKS */
+.scroll-output-tracks {
+  overflow: scroll;
+  overflow-x: hidden;
+  transition: 1s;
+}
+.scroll-output-tracks::-webkit-scrollbar {
+  width: 10px;
+}
+/* Handle on hover */
+.scroll-output-tracks::-webkit-scrollbar-thumb {
+  background: rgb(75 85 99 / 1);
+}
+
+.scroll-output-tracks-horizontal {
+  overflow: scroll;
+  overflow-y: hidden;
+  transition: 1s;
+}
+.scroll-output-tracks-horizontal::-webkit-scrollbar {
+  width: 10px;
+}
+/* Handle on hover */
+.scroll-output-tracks-horizontal::-webkit-scrollbar-thumb {
+  background: rgb(75 85 99 / 1);
 }
