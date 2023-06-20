@@ -51,7 +51,7 @@ async function getData() {
 
   return markdownContent;
 }
-export function parseHTML(htmlString: string) {
+function parseHTML(htmlString: string) {
   // Running on the server-side
   const { JSDOM } = require("jsdom");
   const dom = new JSDOM(htmlString);
@@ -86,7 +86,7 @@ async function PrivacyPolicy() {
       <div className="max-w-screen-xl m-auto">
         <div className="p-3 md:mt-40 scroll-smooth">
           <div className="grid grid-cols-1 grid-content-privacy gap-5">
-          <div className="md:hidden block px-3 border border-r-transparent border-y-transparent border-gray-400">
+            <div className="md:hidden block px-3 border border-r-transparent border-y-transparent border-gray-400">
               <h1 className="text-2xl font-bold">Contents</h1>
               <br />
               <ul className="list-none">
