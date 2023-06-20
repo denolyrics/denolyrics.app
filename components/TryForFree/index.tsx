@@ -11,7 +11,7 @@ function TryForFree() {
             viewBox="0 0 182 194"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-[125px] h-[125px] md:w-[200px] md:h-[200px]"
+            className="w-[150px] h-[150px] md:w-[200px] md:h-[200px]"
           >
             <g id="denolyrics">
               <g id="Clip path group">
@@ -260,7 +260,7 @@ function TryForFree() {
           <h1 id="title">Get started with DenoLyrics today.</h1>
         </div>
         <div className="max-w-screen-md md:m-auto m-3">
-          <p id="description" className="text-2xl font-normal text-center">
+          <p id="description" className="text-lg md:text-2xl font-normal text-center">
             Discover the power of the future.
           </p>
         </div>

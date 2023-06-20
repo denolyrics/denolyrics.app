@@ -68,7 +68,7 @@ function ShareFriends() {
             <p>Share folders with your friends</p>
           </div>
           <div className="max-w-screen-sm m-auto">
-            <p id="description" className="text-xl font-normal">
+            <p id="description" className="text-lg font-normal text-center md:text-start">
               We promote collaboration, simply write your {"friend's"} email,
               assign them permissions, and they will receive an invitation.
             </p>

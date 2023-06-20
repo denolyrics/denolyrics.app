@@ -116,16 +116,16 @@ export default function Home() {
             <ol className="lg:flex lg:items-center text-center lg:text-start">
               <li className="relative mb-6 sm:mb-0">
                 <div className="flex justify-center items-center">
-                  <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white text-xl">
+                  <div className="z-10 flex items-center justify-center w-10 h-10 md:w-6 md:h-10 rounded-full ring-0 bg-[#292936] sm:ring-8 ring-[#292936] shrink-0 text-white">
                     1
                   </div>
                   <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
-                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#C9D1D9]">
                     Sign in
                   </h3>
-                  <p className="font-normal">
+                  <p className="font-normal text-lg">
                     Sign in with your favorite provider.
                   </p>
                 </div>
@@ -138,10 +138,10 @@ export default function Home() {
                   <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
-                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#C9D1D9]">
                     Create folder
                   </h3>
-                  <p className="font-normal">
+                  <p className="font-normal text-lg">
                     Create a folder to later upload your audio files.
                   </p>
                 </div>
@@ -154,10 +154,10 @@ export default function Home() {
                   <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
-                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#C9D1D9]">
                     Upload audio files
                   </h3>
-                  <p className="font-normal">
+                  <p className="font-normal text-lg">
                     Select your audio files with mp3 format.
                   </p>
                 </div>
@@ -170,10 +170,10 @@ export default function Home() {
                   <div className="hidden lg:flex w-full bg-[#828994] h-0.5" />
                 </div>
                 <div className="mt-3 sm:pr-8">
-                  <h3 className="text-2xl font-semibold text-[#C9D1D9]">
+                  <h3 className="text-xl md:text-2xl font-semibold text-[#C9D1D9]">
                     Processing text
                   </h3>
-                  <p className="font-normal">
+                  <p className="font-normal text-lg">
                     Processing audio on the server to get the text.
                   </p>
                 </div>
@@ -216,7 +216,7 @@ export default function Home() {
                     <h5 className="text-2xl font-semibold ">
                       Async transcription
                     </h5>
-                    <p className="text-xl mt-5">
+                    <p className="text-lg md:text-xl mt-5">
                       Save and transcribe pre-recorded audio files in seconds,
                       with our efficient model
                     </p>
@@ -246,7 +246,7 @@ export default function Home() {
                     <h5 className="text-2xl font-semibold ">
                       Incorporating the most recent advancements in AI
                     </h5>
-                    <p className="text-xl mt-5">
+                    <p className="text-lg md:text-xl mt-5">
                       Access AI models built on the latest breakthroughs in
                       Transformers and large-scale training on enormous amounts
                       of data for transcribing speech.
@@ -277,7 +277,7 @@ export default function Home() {
                     <h5 className="text-2xl font-semibold ">
                       We use the best technologies
                     </h5>
-                    <p className="text-xl mt-5">
+                    <p className="text-lg md:text-xl mt-5">
                       Our team is dedicated to writing quality code with the
                       latest and greatest in web technology.
                     </p>

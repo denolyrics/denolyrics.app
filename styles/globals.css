@@ -46,8 +46,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 :root {
-  --card-height: 10rem;
-  --card-width: 10rem;
+  --card-height: 13rem;
+  --card-width: 13rem;
   --border-radius: 25px;
 }
 @media (min-width: 768px) {
@@ -145,7 +145,7 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .bg-gradient-try-free {
     background-color: #363141;
     background-image: url("/gradient-2.png");
@@ -214,4 +214,17 @@ body::-webkit-scrollbar-thumb {
 /* Handle on hover */
 .scroll-output-tracks-horizontal::-webkit-scrollbar-thumb {
   background: rgb(75 85 99 / 1);
+}
+
+
+/* GRID FOR CAPTIONS */
+
+.grid-captions {
+  grid-template-columns: 20% 80%;
+}
+
+@media (min-width: 768px) {
+  .grid-captions {
+    grid-template-columns: 10% 90%;
+  }
 }

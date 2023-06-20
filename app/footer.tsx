@@ -8,14 +8,14 @@ function Footer() {
           <div className="md:flex md:justify-center md:items-center">
             <div className="grid grid-cols-2 px-3 py-6 lg:py-8 gap-3 md:gap-60 md:grid-cols-3">
               <div>
-                <h2 className="mb-6 font-bold">Company</h2>
+                <h2 className="mb-6 font-bold text-center lg:text-start">Company</h2>
                 <ul className="gray font-medium">
-                  <li className="mb-4">
+                  <li className="mb-4 text-center lg:text-start">
                     <Link href="/releases" className=" hover:underline">
                       What’s New
                     </Link>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-4 text-center lg:text-start">
                     <a
                       href="https://status.denolyrics.com/"
                       className="hover:underline"
@@ -26,9 +26,9 @@ function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 font-bold">Follow us</h2>
+                <h2 className="mb-6 font-bold text-center lg:text-start">Follow us</h2>
                 <ul className=" font-medium">
-                  <li className="mb-4">
+                  <li className="mb-4 text-center lg:text-start">
                     <a
                       target={"_blank"}
                       href="https://twitter.com/denolyrics"
@@ -38,7 +38,7 @@ function Footer() {
                       Twitter
                     </a>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-4 text-center lg:text-start">
                     <a
                       href="https://www.facebook.com/Denolyrics2023"
                       className="hover:underline"
@@ -48,7 +48,7 @@ function Footer() {
                       Facebook
                     </a>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-4 text-center lg:text-start">
                     <a
                       target={"_blank"}
                       href="https://www.linkedin.com/company/denolyrics"
@@ -58,7 +58,7 @@ function Footer() {
                       LinkedIn
                     </a>
                   </li>
-                  <li className="mb-4">
+                  <li className="mb-4 text-center lg:text-start">
                     <a
                       target={"_blank"}
                       href="https://www.instagram.com/denolyrics_"
@@ -71,9 +71,9 @@ function Footer() {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 font-bold">Legal</h2>
+                <h2 className="mb-6 font-bold text-center lg:text-start">Legal</h2>
                 <ul className="font-medium">
-                  <li className="mb-4">
+                  <li className="mb-4 text-center lg:text-start">
                     <Link href="/privacy-policy" className="hover:underline">
                       Privacy Policy
                     </Link>

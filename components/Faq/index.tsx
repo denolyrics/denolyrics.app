@@ -8,7 +8,7 @@ function Faq() {
               Frequent asked questions
             </p>
 
-            <p className="mt-2 text-xl font-normal mb-4 md:m-0">
+            <p className="mt-2 text-lg md:text-xl font-normal mb-4 md:m-0">
               These are frequently asked questions that we have collected, if
               you have any suggestions or questions do not hesitate to send us
               an email to the support team.
@@ -22,7 +22,7 @@ function Faq() {
                     <summary className="font-semibold text-xl cursor-pointer border border-slate-300 rounded-md py-2 px-4 mb-3">
                       {question}
                     </summary>
-                    <div className="text-xl font-normal">{answer}</div>
+                    <div className="text-lg md:text-xl font-normal">{answer}</div>
                   </details>
                 </div>
               );

@@ -10,7 +10,7 @@ function FeaturesDeno() {
       <div className="grid grid-cols-1 md:grid-cols-2 h-screen gap-5 p-3">
         <div className="shawdow-modal">
           <div className="bg-[#363141] p-3 mt-4 rounded-t-lg">
-            <div className="flex justify-center gap-2 scroll-output-tracks-horizontal">
+            <div className="flex md:justify-center gap-2 scroll-output-tracks-horizontal">
               <div
                 onClick={() => setFeatureSelected("text")}
                 className={`inline-flex gap-2 rounded-t-lg cursor-pointer ${
@@ -138,8 +138,7 @@ function FeaturesDeno() {
                       return (
                         <div
                           key={window.crypto.randomUUID()}
-                          className="grid gap-4"
-                          style={{ gridTemplateColumns: "10% 90%" }}
+                          className="grid gap-4 grid-captions px-3 md:px-0"
                         >
                           <div className="text-center text-indigo-400 hover:underline cursor-pointer">
                             {convertSecondsToTime(start).replace(".", ":")}
