@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://denolyrics.com/",
-    title: "What’s New | DenoLyrics",
+    title: "Home | DenoLyrics",
     description:
       "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
     siteName: "DenoLyrics",
