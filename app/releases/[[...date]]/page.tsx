@@ -129,7 +129,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       0,
       firstLineBreak - 1
     );
-    MetadataRelease.openGraph.url = `/releases/${convertDateToHyphen(
+    MetadataRelease.openGraph.url = `https://www.denolyrics.com/releases/${convertDateToHyphen(
       data.results[0].date
     )}`;
     MetadataRelease.openGraph.images = [
