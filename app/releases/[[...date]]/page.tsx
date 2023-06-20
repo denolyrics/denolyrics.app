@@ -223,7 +223,7 @@ async function Releases({ params }: Props) {
                   <picture>
                     <Image
                       src={`/releases/${image}`}
-                      alt=""
+                      alt={title}
                       width={808}
                       height={420}
                       className="h-[200px] w-full md:w-[808px] md:h-[320px] lg:h-[420px] rounded-lg mb-10"
