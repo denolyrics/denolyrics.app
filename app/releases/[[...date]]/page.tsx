@@ -134,12 +134,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     )}`;
     MetadataRelease.openGraph.images = [
       {
-        url: `/releases/${data.results[0].image}}`,
+        url: `https://www.denolyrics.com/releases/${data.results[0].image}}`,
       },
     ];
     MetadataRelease.twitter.images = [
       {
-        url: `/releases/${data.results[0].image}}`,
+        url: `https://www.denolyrics.com/releases/${data.results[0].image}}`,
       },
     ];
     MetadataRelease.openGraph.type = "article";
