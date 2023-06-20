@@ -86,8 +86,6 @@ let MetadataRelease = {
     images: [
       {
         url: "https://denolyrics.com/preview.png",
-        width: 1920,
-        height: 1080,
       },
     ],
     publishedTime: "",
@@ -101,8 +99,6 @@ let MetadataRelease = {
     images: [
       {
         url: "https://denolyrics.com/preview.png",
-        width: 1920,
-        height: 1080,
       },
     ],
   },
