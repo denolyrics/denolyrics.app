@@ -16,3 +16,5 @@ Allow: /privacy-policy
 
 
 Sitemap: https://www.denolyrics.com/sitemap.xml
+
+Sitemap: https://www.denolyrics.com/releases/sitemap.xml
