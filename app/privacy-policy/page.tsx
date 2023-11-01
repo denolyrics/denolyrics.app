@@ -2,10 +2,13 @@ import path from "path";
 import { promises as fs } from "fs";
 import { marked } from "marked";
 import Link from "next/link";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
+
+// COMPONENTS
 import NavbarGetStarted from "@/components/NavbarGetStarted";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.denolyrics.com"),
   title: "Privacy policy | DenoLyrics",
   description:
     "The fastest web app for speech recognition, auto language detection and more. Plans starting at $0/month.",
@@ -36,6 +39,9 @@ export const metadata: Metadata = {
     ],
   },
   category: "website",
+};
+
+export const viewport: Viewport = {
   themeColor: "#180821",
 };
 
@@ -44,10 +50,7 @@ async function getData() {
 
   const data = await fs.readFile(`${policyDir}/data-privacy.md`, "utf8");
 
-  const markdownContent = marked.parse(data, {
-    mangle: false,
-    headerIds: false,
-  });
+  const markdownContent = marked.parse(data);
 
   return markdownContent;
 }

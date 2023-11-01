@@ -1,11 +1,14 @@
 import Faq from "@/components/Faq";
 import Link from "next/link";
+import { Metadata, Viewport } from "next";
+
+// COMPONENTS
 import CounterDiscount from "@/components/CounterDiscount";
 import TryForFree from "@/components/TryForFree";
-import { Metadata } from "next";
 import NavbarGetStarted from "@/components/NavbarGetStarted";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.denolyrics.com"),
   title: "Pricing | DenoLyrics",
   description:
     "The fastest web app for speech recognition, auto language detection and more. Plans starting at $0/month.",
@@ -36,8 +39,12 @@ export const metadata: Metadata = {
     ],
   },
   category: "website",
+};
+
+export const viewport: Viewport = {
   themeColor: "#180821",
 };
+
 
 function Pricing() {
   return (

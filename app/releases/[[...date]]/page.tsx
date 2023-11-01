@@ -1,7 +1,7 @@
 import NavbarGetStarted from "@/components/NavbarGetStarted";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import path from "path";
 import { promises as fs } from "fs";
 import { marked } from "marked";
@@ -39,10 +39,7 @@ async function getData(dateSelected: string) {
         date,
         image,
         author,
-        content: marked.parse(markdownContent, {
-          mangle: false,
-          headerIds: false,
-        }),
+        content: marked.parse(markdownContent),
       });
     }
   } else {
@@ -58,10 +55,7 @@ async function getData(dateSelected: string) {
         date,
         image,
         author,
-        content: marked.parse(markdownContent, {
-          mangle: false,
-          headerIds: false,
-        }),
+        content: marked.parse(markdownContent),
       });
     }
   }
@@ -74,6 +68,7 @@ type Props = {
 };
 
 let MetadataRelease = {
+  metadataBase: new URL("https://www.denolyrics.com"),
   title: "What’s New | DenoLyrics",
   description: "Follow us like @DenoLyrics to be pending new updates.",
   keywords: "DenoLyrics, el salvador",
@@ -103,6 +98,9 @@ let MetadataRelease = {
     ],
   },
   category: "website",
+};
+
+export const viewport: Viewport = {
   themeColor: "#180821",
 };
 

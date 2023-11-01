@@ -1,17 +1,18 @@
 import Faq from "@/components/Faq";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
 import Script from "next/script";
+import { Metadata, Viewport } from "next";
 import { faqs } from "../components/Faq";
 
-// CONTEXT
+// COMPONENTS
 import TryForFree from "@/components/TryForFree";
 import ShareFriends from "@/components/ShareFriends/page";
 import NavbarGetStarted from "@/components/NavbarGetStarted";
 import FeaturesDeno from "@/components/FeaturesDeno";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.denolyrics.com"),
   title: "Home | DenoLyrics",
   description:
     "DenoLyrics is a web application built with an AI model that supports 143 languages, no matter if the audio speed is fast or slow.",
@@ -42,6 +43,9 @@ export const metadata: Metadata = {
     ],
   },
   category: "website",
+};
+
+export const viewport: Viewport = {
   themeColor: "#180821",
 };
 
