@@ -11,6 +11,22 @@ body {
   background-color: #363141;
 }
 
+/* SCROLL BODY */
+body {
+  overflow: scroll;
+  height: 100vh;
+  width: auto;
+  overflow-x: hidden;
+  transition: 1s;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+  background: rgb(222, 219, 219);
+}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #363141;
+}
 .gradient-shawdow {
   filter: drop-shadow(0 0 2em #74f9be);
 }
