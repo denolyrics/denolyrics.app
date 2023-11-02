@@ -66,7 +66,7 @@ function Pricing() {
                   pricingOff.expireDate >= new Date().getTime() && (
                     <div className="float-right">
                       <div className="p-3 bg-[#6930c3] text-white py-1 rounded-lg mb-2">
-                        50% OFF
+                        25% OFF
                       </div>
                     </div>
                   )}
@@ -174,7 +174,7 @@ const suscriptions = [
   {
     id: 3,
     type: "Professional Gold",
-    pricing: 60,
+    pricing: 45,
     duration: "year",
     benefits: [
       "Speech recognition",
@@ -193,5 +193,5 @@ const suscriptions = [
 
 const pricingOff = {
   type: "year",
-  expireDate: 1676680648321, // fecha actual
+  expireDate: 1699424864180, // fecha actual
 };
